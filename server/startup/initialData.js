@@ -2,7 +2,7 @@ import _ from 'underscore';
 
 Meteor.startup(function() {
 	Meteor.defer(function() {
-		if (!RocketChat.models.Rooms.findOneById('GENERAL')) {
+/*		if (!RocketChat.models.Rooms.findOneById('GENERAL')) {
 			RocketChat.models.Rooms.createWithIdTypeAndName('GENERAL', 'c', 'general', {
 				'default': true
 			});
@@ -37,7 +37,7 @@ Meteor.startup(function() {
 				});
 			});
 		}
-
+*/
 		if (process.env.ADMIN_PASS) {
 			if (_.isEmpty(RocketChat.authz.getUsersInRole('admin').fetch())) {
 				console.log('Inserting admin user:'.green);

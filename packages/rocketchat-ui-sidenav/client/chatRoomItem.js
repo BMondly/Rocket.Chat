@@ -24,11 +24,18 @@ Template.chatRoomItem.helpers({
 		const icon = RocketChat.roomTypes.getIcon(this.t);
 		const avatar = !icon;
 
+		const displayField = RocketChat.settings.get('UI_Custom_field_display_name');
+		let username = this.name;
+		if (displayField && this.customFields && this.customFields[displayField]) {
+			username = this.customFields[displayField];
+			name = this.customFields[displayField];
+		}
+
 		const roomData = {
 			...this,
 			icon,
 			avatar,
-			username : this.name,
+			username,
 			route: RocketChat.roomTypes.getRouteLink(this.t, this),
 			name,
 			unread,

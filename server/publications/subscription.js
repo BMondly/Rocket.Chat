@@ -31,6 +31,11 @@ const fields = {
 	hideUnreadStatus: 1
 };
 
+const displayField = RocketChat.settings.get('UI_Custom_field_display_name');
+if (displayField) {
+	fields[`customFields${ displayField }`] = 1;
+}
+
 Meteor.methods({
 	'subscriptions/get'(updatedAt) {
 		if (!Meteor.userId()) {

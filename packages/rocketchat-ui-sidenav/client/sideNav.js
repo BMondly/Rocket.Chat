@@ -14,7 +14,7 @@ Template.sideNav.helpers({
 	},
 
 	roomType() {
-		return RocketChat.roomTypes.getTypes().map((roomType) => {
+		return RocketChat.roomTypes.getTypes().filter((roomType) => roomType.identifier!='c').map((roomType) => {
 			return {
 				template: roomType.customTemplate || 'roomList',
 				data: {
