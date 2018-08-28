@@ -7,6 +7,7 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		this.tryEnsureIndex({ 'rid': 1, 'alert': 1, 'u._id': 1 });
 		this.tryEnsureIndex({ 'rid': 1, 'roles': 1 });
 		this.tryEnsureIndex({ 'u._id': 1, 'name': 1, 't': 1 });
+		this.tryEnsureIndex({ 'u._id': 1, 'name': 1, 't': 1, 'code': 1, 'team': 1 }, { unique: 1 });
 		this.tryEnsureIndex({ 'open': 1 });
 		this.tryEnsureIndex({ 'alert': 1 });
 
@@ -21,6 +22,12 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		this.tryEnsureIndex({ 'autoTranslate': 1 }, { sparse: 1 });
 		this.tryEnsureIndex({ 'autoTranslateLanguage': 1 }, { sparse: 1 });
 		this.tryEnsureIndex({ 'userHighlights.0': 1 }, { sparse: 1 });
+
+		this.cache.ensureIndex('rid', 'array');
+		this.cache.ensureIndex('u._id', 'array');
+		this.cache.ensureIndex('name', 'array');
+		this.cache.ensureIndex(['rid', 'u._id'], 'unique');
+		this.cache.ensureIndex(['name', 'team', 'u._id'], 'unique');
 	}
 
 
@@ -43,9 +50,13 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.findOne(query, options);
 	}
 
-	findOneByRoomNameAndUserId(roomName, userId) {
+		findOneByRoomNameAndUserId(team, roomName, userId) {
+		if (this.useCache) {
+			return this.cache.findByIndex('name,team,u._id', [team, roomName, userId]).fetch();
+		}
 		const query = {
 			name: roomName,
+			team,
 			'u._id': userId
 		};
 
@@ -787,7 +798,8 @@ class ModelSubscriptions extends RocketChat.models._Base {
 				name: user.name
 			},
 			...RocketChat.getDefaultSubscriptionPref(user),
-			...extraData
+			...extraData,
+			team: room.team
 		};
 
 		const result = this.insert(subscription);

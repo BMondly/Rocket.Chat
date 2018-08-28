@@ -66,6 +66,26 @@ Template.roomList.helpers({
 				query.f = {$ne: favoritesEnabled};
 			}
 		}
+
+		if (sortBy === 'activity') {
+			const list = ChatSubscription.find(query).fetch();
+			RocketChat.models.Rooms.find();
+			const rooms = RocketChat.models.Rooms._collection._docs._map;
+
+			return _.sortBy(list.map(sub => {
+				const lm = rooms[sub.rid] && rooms[sub.rid]._updatedAt;
+				return {
+					...sub,
+					lm: lm && lm.toISOString && lm.toISOString()
+				};
+			}), 'lm').reverse();
+		}
+
+		const team = FlowRouter.getParam('team');
+		if(team) {
+			query.team = team;
+		}
+
 		return ChatSubscription.find(query, {sort});
 	},
 
