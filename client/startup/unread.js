@@ -39,7 +39,7 @@ Meteor.startup(function() {
 				}
 			}
 
-			if (RoomManager.openedRooms[subscription.t + subscription.name]) {
+			if (RoomManager.openedRooms[subscription.t + subscription.team + '/' + subscription.name]) {
 				readMessage.refreshUnreadMark(subscription.rid);
 			}
 		}

@@ -16,6 +16,12 @@ RocketChat.createRoom = function(type, name, owner, members, readOnly, extraData
 		throw new Meteor.Error('error-invalid-user', 'Invalid user', { function: 'RocketChat.createRoom' });
 	}
 
+<<<<<<< HEAD
+=======
+	const slugifiedRoomName = RocketChat.getValidRoomName(name, extraData.team);
+
+	const now = new Date();
+>>>>>>> 7a0e69721... Add basic support for teams
 	if (!_.contains(members, owner.username)) {
 		members.push(owner.username);
 	}

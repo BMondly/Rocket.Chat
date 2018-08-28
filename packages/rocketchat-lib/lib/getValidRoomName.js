@@ -1,10 +1,10 @@
 import s from 'underscore.string';
 
-RocketChat.getValidRoomName = function getValidRoomName(displayName, rid = '') {
+RocketChat.getValidRoomName = function getValidRoomName(displayName, team, rid = '') {
 	let slugifiedName = displayName;
 
 	if (RocketChat.settings.get('UI_Allow_room_names_with_special_chars')) {
-		const room = RocketChat.models.Rooms.findOneByDisplayName(displayName);
+		const room = RocketChat.models.Rooms.findOneByDisplayName(displayName, team);
 		if (room && room._id !== rid) {
 			if (room.archived) {
 				throw new Meteor.Error('error-archived-duplicate-name', `There's an archived channel with name ${ displayName }`, { function: 'RocketChat.getValidRoomName', channel_name: displayName });
@@ -28,7 +28,7 @@ RocketChat.getValidRoomName = function getValidRoomName(displayName, rid = '') {
 		});
 	}
 
-	const room = RocketChat.models.Rooms.findOneByName(slugifiedName);
+	const room = RocketChat.models.Rooms.findOneByName(slugifiedName, team);
 	if (room && room._id !== rid) {
 		if (RocketChat.settings.get('UI_Allow_room_names_with_special_chars')) {
 			let tmpName = slugifiedName;
