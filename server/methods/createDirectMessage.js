@@ -39,7 +39,7 @@ Meteor.methods({
 			});
 		}
 
-		const rid = [me._id, to._id].sort().join('') + '_' + team;
+		const rid = [me._id, to._id].sort().join('') + team;
 
 		const now = new Date();
 
