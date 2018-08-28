@@ -30,9 +30,12 @@ class API extends Restivus {
 			_updatedAt: 0,
 			customFields: 0,
 			settings: 0
+<<<<<<< HEAD
 		};
 		this.limitedUserFieldsToExcludeIfIsPrivilegedUser = {
 			services: 0
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
 		};
 
 		this._config.defaultOptionsEndpoint = function _defaultOptionsEndpoint() {

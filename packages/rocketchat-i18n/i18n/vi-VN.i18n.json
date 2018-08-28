@@ -49,7 +49,16 @@
   "Accounts_Default_User_Preferences_not_available": "Không thể truy xuất Sở thích Người dùng bởi vì chúng chưa được người dùng thiết lập",
   "Accounts_DefaultUsernamePrefixSuggestion": "Tiền tố tên người dùng mặc định",
   "Accounts_denyUnverifiedEmail": "Từ chối email chưa xác thực",
+<<<<<<< HEAD
   "Accounts_Email_Activated": "[name] <br/><br/><p>Tài khoản của bạn đã được kích hoạt.</p>",
+=======
+  "Accounts_EmailVerification": "Xác thực email",
+  "Accounts_EmailVerification_Description": "Chắc chắn rằng bạn đã cấu hình thông tin SMTP chính xác trước khi sử dụng tính năng này",
+  "Accounts_Email_Approved": "[name] <br/><br/><p>Tài khoản của bạn đã được chấp thuận.</p>",
+  "Accounts_Email_Activated": "[name] <br/><br/><p>Tài khoản của bạn đã được kích hoạt.</p>",
+  "Accounts_Email_Deactivated": "[name] <br/><br/><p>Tài khoản của bạn đã bị vô hiệu hoá.</p>",
+  "Accounts_Email_Approved_Subject": "Tài khoản được chấp thuận",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Accounts_Email_Activated_Subject": "Đã kích hoạt tài khoản",
   "Accounts_Email_Approved": "[name] <br/><br/><p>Tài khoản của bạn đã được chấp thuận.</p>",
   "Accounts_Email_Approved_Subject": "Tài khoản được chấp thuận",
@@ -58,9 +67,18 @@
   "Accounts_EmailVerification": "Xác thực email",
   "Accounts_EmailVerification_Description": "Chắc chắn rằng bạn đã cấu hình thông tin SMTP chính xác trước khi sử dụng tính năng này",
   "Accounts_Enrollment_Email": "Email đăng ký",
+<<<<<<< HEAD
   "Accounts_Enrollment_Email_Default": "<h1>Chào mừng đến <strong>[Site_Name]</strong></h1><p>Truy cập <a href=\"[Site_URL]\">[Site_URL]</a> và trải nghiệm nền tảng chat trực tuyến tốt nhất hiện nay!</p>",
   "Accounts_Enrollment_Email_Description": "Bạn có thể các sử dụng placeholder sau: <br/><ul><li>[name], [fname], [lname] tương ứng với họ và tên, tên hoặc họ của người dùng.</li><li>[email] là địa chỉ email của người dùng.</li><li>[Site_Name] và [Site_URL] là tên và URL của ứng dụng.</li></ul>",
   "Accounts_Enrollment_Email_Subject_Default": "Chào mừng đến [Site_Name]",
+=======
+  "Accounts_Enrollment_Email_Default": "<h2>Chào mừng đến <h1>[Site_Name]</h1></h2><p>Truy cập <a href=\"[Site_URL]\"><a href=\"[Site_URL]\">[Site_URL]</a></a> và trải nghiệm nền tảng chat trực tuyến tốt nhất hiện nay!</p>",
+  "Accounts_Enrollment_Email_Description": "Bạn có thể các sử dụng placeholder sau: <br/><ul><li>[name], [fname], [lname] tương ứng với họ và tên, tên hoặc họ của người dùng.</li><li>[email] là địa chỉ email của người dùng.</li><li>[Site_Name] và [Site_URL] là tên và URL của ứng dụng.</li></ul>",
+  "Accounts_Enrollment_Email_Subject_Default": "Chào mừng đến [Site_Name]",
+  "Accounts_Admin_Email_Approval_Needed_Default": "<p>Người dùng <b>[name] ([email])</b>đã được đăng ký.</p><p>Vui lòng kiểm tra \"Quản trị ->Người dùng\" để kích hoạt hoặc xóa nó.</p>",
+  "Accounts_Admin_Email_Approval_Needed_With_Reason_Default": "<p>Người dùng <b>[name] ([email])</b>đã được đăng ký.</p><p>Lý do: <b>[lý do]</b></p><p>Vui lòng kiểm tra \"Quản trị ->Người dùng\" để kích hoạt hoặc xóa nó.</p>",
+  "Accounts_Admin_Email_Approval_Needed_Subject_Default": "Đã đăng ký người dùng mới và cần phê duyệt",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Accounts_ForgetUserSessionOnWindowClose": "Xóa phiên đăng nhập của người dùng khi đóng cửa sổ",
   "Accounts_Iframe_api_method": "Phương thức API",
   "Accounts_Iframe_api_url": "API URL",
@@ -122,6 +140,7 @@
   "Accounts_OAuth_Tokenpass_secret": "Tokenpass Secret",
   "Accounts_OAuth_Twitter": "Đăng nhập qua Twitter",
   "Accounts_OAuth_Wordpress": "Đăng nhập qua WordPress",
+<<<<<<< HEAD
   "Accounts_OAuth_Wordpress_authorize_path": "Đường dẫn ủy quyền (Authorize)",
   "Accounts_OAuth_Wordpress_callback_url": "URL callback WordPress",
   "Accounts_OAuth_Wordpress_identity_path": "Đường dẫn xác thực (Identity Path)",
@@ -149,6 +168,9 @@
   "Accounts_Password_Policy_MaxLength_Description": "Đảm bảo rằng mật khẩu không có nhiều hơn số lượng ký tự này. Sử dụng `-1` để tắt.",
   "Accounts_Password_Policy_MinLength": "Chiều dài tối thiểu",
   "Accounts_Password_Policy_MinLength_Description": "Đảm bảo rằng mật khẩu phải có ít nhất số lượng ký tự này. Sử dụng `-1` để tắt.",
+=======
+  "Accounts_OAuth_Wordpress_callback_url": "URL callback WordPress",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Accounts_PasswordReset": "Đặt lại mật khẩu",
   "Accounts_Registration_AuthenticationServices_Default_Roles": "Vai trò mặc định của Authentication Services",
   "Accounts_Registration_AuthenticationServices_Default_Roles_Description": "Các vai trò (phân cách bằng dấu phẩy) của người dùng sau khi đăng ký thông qua authentication services",
@@ -170,7 +192,11 @@
   "Accounts_TwoFactorAuthentication_MaxDelta_Description": "Delta Tối đa xác định có bao nhiêu mã thông báo có giá trị tại bất kỳ thời điểm nào. Tokens được tạo ra mỗi 30 giây, và có giá trị cho (30 * Tối đa Delta) giây. <br/>Ví dụ: Với Delta tối đa được đặt là 10, mỗi mã thông báo có thể được sử dụng tối đa 300 giây trước hoặc sau khi đó là dấu thời gian. Điều này rất hữu ích khi đồng hồ của khách hàng không được đồng bộ hóa đúng với máy chủ.",
   "Accounts_UseDefaultBlockedDomainsList": "Sử dụng danh sách tên miền bị chặn mặc định",
   "Accounts_UseDNSDomainCheck": "Sử dụng DNS Domain Check",
+<<<<<<< HEAD
   "Accounts_UserAddedEmail_Default": "<h1>Chào mừng đến <strong>[Site_Name]</strong></h1><p>Hãy truy cập <a href=\"[Site_URL]\">[Site_URL]</a> và trải nghiệm giải pháp mã nguồn mở tuyệt vời nhất hiện nay!</p><p>Bạn có thể đăng nhập sử dụng hòm thư: [email] và mật khẩu: [password]. Bạn có thể được yêu cầu thay đổi nó sau lần đăng nhập đầu tiên.",
+=======
+  "Accounts_UserAddedEmail_Default": "<h2>Chào mừng đến <h1>[Site_Name]</h1></h2><p>Hãy truy cập <a href=\"[Site_URL]\">[Site_URL]</a> và trải nghiệm giải pháp mã nguồn mở tuyệt vời nhất hiện nay!</p><p>Bạn có thể đăng nhập sử dụng hòm thư: [email] và mật khẩu: [password]. Bạn có thể được yêu cầu thay đổi nó sau lần đăng nhập đầu tiên.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Accounts_UserAddedEmail_Description": "Bạn có thể sử dụng các placeholder sau: <br/><ul><li>[name], [fname], [lname] tương ứng cho tên, họ hoặc họ của người dùng, tương ứng.</li><li>[email] cho email của người dùng.</li><li>[password] cho mật khẩu của người dùng.</li><li>[Site_Name] và [Site_URL] cho Tên Ứng dụng và URL tương ứng.</li></ul>",
   "Accounts_UserAddedEmailSubject_Default": "Bạn đã được thêm vào [Site_Name]",
   "Activate": "Đang hoạt động",
@@ -213,7 +239,11 @@
   "Alerts": "Cảnh báo",
   "Alias": "Bí danh",
   "Alias_Format": "Định dạng Alias",
+<<<<<<< HEAD
   "Alias_Format_Description": "Nhập dữ liệu tin nhắn từ Slack với Alias; %s được thay thế bằng tên của người dùng. Nếu trống, không Alias nào sẽ được sử dụng.",
+=======
+  "Alias_Format_Description": "Nhập dữ liệu tin nhắn từ Slack với Alias; % s được thay thế bằng tên của người dùng. Nếu trống, không Alias nào sẽ được sử dụng.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Alias_Set": "Đặt bí danh",
   "All": "Tất cả",
   "All_added_tokens_will_be_required_by_the_user": "Tất cả các thẻ phụ sẽ được yêu cầu bởi người dùng",
@@ -348,8 +378,13 @@
   "AutoTranslate_Enabled_Description": "Bật tự động dịch sẽ cho phép những người có <code class=\"inline\">dịch tự động</code> quyền để tất cả các tin nhắn tự động được dịch sang ngôn ngữ đã chọn. Có thể áp dụng phí, xem <a target=\"_blank\" href=\"https://cloud.google.com/translate/pricing\">Tài liệu của Google</a>",
   "AutoTranslate_GoogleAPIKey": "Khóa Google API",
   "Available": "Có sẵn",
+<<<<<<< HEAD
   "Available_agents": "Các agent có sẵn",
   "Avatar": "Hình đại diện",
+=======
+  "Avatar": "Hình đại diện",
+  "Available_agents": "Các agent có sẵn",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Avatar_changed_successfully": "Avatar đã thay đổi thành công",
   "Avatar_URL": "URL Avatar",
   "Avatar_url_invalid_or_error": "URL cung cấp không hợp lệ hoặc không thể truy cập. Vui lòng thử lại, nhưng với một url khác.",
@@ -372,16 +407,23 @@
   "ban-user_description": "Cho phép cấm người dùng từ kênh",
   "Beta_feature_Depends_on_Video_Conference_to_be_enabled": "Tính năng Beta. Phụ thuộc vào Hội nghị Video được kích hoạt.",
   "Block_User": "Chặn Người dùng",
+<<<<<<< HEAD
   "Blockchain": "Blockchain",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Body": "Thân",
   "bold": "Dũng cảm",
   "bot_request": "Yêu cầu Bot",
   "BotHelpers_userFields": "Trường người dùng",
   "BotHelpers_userFields_Description": "CSV của các trường người dùng có thể được truy cập bằng phương pháp trợ giúp bots.",
+<<<<<<< HEAD
   "Bots": "Bots",
   "Branch": "Nhánh",
   "Broadcast_channel": "Kênh phát sóng",
   "Broadcast_channel_Description": "Chỉ những người dùng được ủy quyền mới có thể viết thư mới, nhưng những người dùng khác sẽ có thể trả lời",
+=======
+  "Branch": "Nhánh",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Broadcast_Connected_Instances": "Broadcast Connected Instances",
   "Bugsnag_api_key": "Khóa API Bugsnag",
   "Build_Environment": "Xây dựng môi trường",
@@ -434,7 +476,11 @@
   "Channel_name": "Tên kênh",
   "Channel_Name_Placeholder": "Vui lòng nhập tên kênh ...",
   "Channel_to_listen_on": "Kênh để lắng nghe",
+<<<<<<< HEAD
   "Channel_Unarchived": "Kênh với tên `#%s` đã được Unarchived thành công",
+=======
+  "Channel_Unarchived": "Kênh với tên `#% s` đã được Unarchived thành công",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Channels": "Kênh",
   "Channels_are_where_your_team_communicate": "Kênh là nơi nhóm của bạn giao tiếp",
   "Channels_list": "Danh sách các kênh công cộng",
@@ -519,6 +565,7 @@
   "Closed": "Đóng",
   "Closed_by_visitor": "Đóng bởi khách truy cập",
   "Closing_chat": "Trò chuyện kết thúc",
+  "Collapse": "Thu gọn",
   "Collapse_Embedded_Media_By_Default": "Thu gọn Media theo mặc định",
   "Color": "Màu",
   "Commands": "Lệnh",
@@ -896,13 +943,20 @@
   "Direct_Reply_Separator_Description": "[Chỉ thay đổi nếu bạn biết chính xác mình đang làm gì, tham khảo tài liệu]<br/>Phân cách giữa phần cơ sở và phần nhãn của email",
   "Direct_Reply_Username": "Tên đăng nhập",
   "Direct_Reply_Username_Description": "Vui lòng sử dụng email tuyệt đối, không được phép gắn thẻ, nó sẽ được ghi đè lại",
+<<<<<<< HEAD
   "Directory": "Danh mục",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Disable_Facebook_integration": "Vô hiệu hoá tích hợp trên Facebook",
   "Disable_Notifications": "Vô hiệu hóa thông báo",
   "Disable_two-factor_authentication": "Tắt xác thực hai yếu tố",
   "Disabled": "Đã tắt",
+<<<<<<< HEAD
   "Disallow_reacting": "Không cho phép biểu cảm",
   "Disallow_reacting_Description": "Không cho phép biểu cảm",
+=======
+  "Display_unread_counter": "Hiển thị số tin nhắn chưa đọc",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Display_offline_form": "Hiển thị biểu mẫu ngoại tuyến",
   "Display_unread_counter": "Hiển thị số tin nhắn chưa đọc",
   "Displays_action_text": "Hiển thị văn bản hành động",
@@ -910,8 +964,12 @@
   "Dont_ask_me_again_list": "Đừng hỏi lại tôi",
   "Do_not_display_unread_counter": "Không hiển thị bất kỳ bộ đếm nào của kênh này",
   "Do_you_want_to_accept": "Bạn có muốn chấp nhận không?",
+<<<<<<< HEAD
   "Do_you_want_to_change_to_s_question": "Bạn có muốn thay đổi thành <strong>%s</strong>?",
   "Document_Domain": "Miền tài liệu",
+=======
+  "Do_you_want_to_change_to_s_question": "Bạn có muốn thay đổi thành <strong>% s</strong>?",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Domain": "Tên miền",
   "Domain_added": "tên miền đã được thêm",
   "Domain_removed": "Đã xóa tên miền",
@@ -922,10 +980,17 @@
   "Drop_to_upload_file": "Thả để tải tệp lên",
   "Dry_run": "Chạy thử",
   "Dry_run_description": "Sẽ chỉ gửi một email, đến cùng một địa chỉ như trong Từ. Email phải thuộc về một người dùng hợp lệ.",
+<<<<<<< HEAD
   "Duplicate_archived_channel_name": "Đã lưu trữ kênh với tên `#%s` tồn tại",
   "Duplicate_archived_private_group_name": "Một Nhóm riêng tư lưu trữ có tên '%s' tồn tại",
   "Duplicate_channel_name": "Một Kênh có tên '%s' tồn tại",
   "Duplicate_private_group_name": "Một nhóm riêng có tên '%s' tồn tại",
+=======
+  "Duplicate_archived_channel_name": "Đã lưu trữ kênh với tên `#% s` tồn tại",
+  "Duplicate_archived_private_group_name": "Một Nhóm riêng tư lưu trữ có tên '% s' tồn tại",
+  "Duplicate_channel_name": "Một Kênh có tên '% s' tồn tại",
+  "Duplicate_private_group_name": "Một nhóm riêng có tên '% s' tồn tại",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Duration": "Thời lượng",
   "Edit": "Chỉnh sửa",
   "edit-message": "Chỉnh sửa tin nhắn",
@@ -973,6 +1038,10 @@
   "Enable_Svg_Favicon": "Bật SVAV favicon",
   "Enable_two-factor_authentication": "Bật xác thực hai yếu tố",
   "Enabled": "Đã bật",
+<<<<<<< HEAD
+=======
+  "Enable_Auto_Away": "Bật Auto Away",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Encrypted_message": "Tin nhắn được mã hóa",
   "End_OTR": "Kết thúc OTR",
   "Enter_a_regex": "Nhập regex",
@@ -1089,8 +1158,13 @@
   "Example_s": "Ví dụ: <code class=\"inline\">%s</code>",
   "Exclude_Botnames": "Loại trừ Bots",
   "Exclude_Botnames_Description": "Không truyền bá tin nhắn từ các bots có tên trùng với Regular Expression ở trên. Nếu để trống, tất cả các tin nhắn từ chương trình sẽ được truyền.",
+<<<<<<< HEAD
   "Execute_Synchronization_Now": "Thực hiện đồng bộ ngay bây giờ",
   "Export_My_Data": "Xuất dữ liệu của tôi",
+=======
+  "Expand": "Mở",
+  "External_Service": "Dịch vụ bên ngoài",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "External_Queue_Service_URL": "URL dịch vụ hàng đợi bên ngoài",
   "External_Service": "Dịch vụ bên ngoài",
   "Facebook_Page": "Trang Facebook",
@@ -1116,12 +1190,19 @@
   "FileUpload_GoogleStorage_AccessId_Description": "Id Truy cập nói chung là định dạng email, ví dụ: \"example-test@example.iam.gserviceaccount.com\"",
   "FileUpload_GoogleStorage_Bucket": "Tên Bucket Google Storage",
   "FileUpload_GoogleStorage_Bucket_Description": "Tên của Bucket cần tải lên các tệp.",
+<<<<<<< HEAD
   "FileUpload_GoogleStorage_Proxy_Avatars": "Hình đại diện của Proxy",
   "FileUpload_GoogleStorage_Proxy_Avatars_Description": "Gửi tệp đại diện proxy qua máy chủ của bạn thay vì truy cập trực tiếp vào URL của nội dung",
   "FileUpload_GoogleStorage_Proxy_Uploads": "Tải lên proxy",
   "FileUpload_GoogleStorage_Proxy_Uploads_Description": "Tệp tải lên tệp Proxy qua máy chủ của bạn thay vì truy cập trực tiếp vào URL của nội dung",
   "FileUpload_GoogleStorage_Secret": "Khóa Secret của Lưu Trữ Google",
   "FileUpload_GoogleStorage_Secret_Description": "Hãy làm theo <a href=\"https://github.com/CulturalMe/meteor-slingshot#google-cloud\" >những hướng dẫn này</a>và dán kết quả tại đây.",
+=======
+  "FileUpload_GoogleStorage_Proxy": "Ủy quyền",
+  "FileUpload_GoogleStorage_Proxy_Description": "Proxy truyền tất cả tệp qua máy chủ của bạn thay vì truy cập trực tiếp vào URL của nội dung",
+  "FileUpload_GoogleStorage_Secret": "Khóa Secret của Lưu Trữ Google",
+  "FileUpload_GoogleStorage_Secret_Description": "Hãy làm theo <a href = \"https://github.com/CulturalMe/meteor-slingshot#google-cloud\" >những hướng dẫn này</a>và dán kết quả tại đây.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "FileUpload_MaxFileSize": "Kích thước Tải lên Tệp Tối đa (bằng byte)",
   "FileUpload_MediaType_NotAccepted": "Các loại phương tiện không được chấp nhận",
   "FileUpload_MediaTypeWhiteList": "Các định dạng được chấp nhận",
@@ -1135,10 +1216,15 @@
   "FileUpload_S3_BucketURL": "Địa chỉ URL",
   "FileUpload_S3_CDN": "Tên miền CDN cho tải xuống",
   "FileUpload_S3_ForcePathStyle": "Chế độ Force Path",
+<<<<<<< HEAD
   "FileUpload_S3_Proxy_Avatars": "Hình đại diện của Proxy",
   "FileUpload_S3_Proxy_Avatars_Description": "Gửi tệp đại diện proxy qua máy chủ của bạn thay vì truy cập trực tiếp vào URL của nội dung",
   "FileUpload_S3_Proxy_Uploads": "Tải lên proxy",
   "FileUpload_S3_Proxy_Uploads_Description": "Tệp tải lên tệp Proxy qua máy chủ của bạn thay vì truy cập trực tiếp vào URL của nội dung",
+=======
+  "FileUpload_S3_Proxy": "Ủy quyền",
+  "FileUpload_S3_Proxy_Description": "Proxy truyền tất cả tệp qua máy chủ của bạn thay vì truy cập trực tiếp vào URL của nội dung",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "FileUpload_S3_Region": "Khu vực",
   "FileUpload_S3_SignatureVersion": "Phiên bản Chữ ký",
   "FileUpload_S3_URLExpiryTimeSpan": "Thời gian hết hạn URL",
@@ -1171,7 +1257,11 @@
   "Force_SSL_Description": "* Chú ý! _Force SSL_ không nên được sử dụng với proxy ngược lại. Nếu bạn có một proxy ngược lại, bạn nên làm các redirect THERE. Tùy chọn này tồn tại cho các triển khai như Heroku, không cho phép cấu hình chuyển hướng ở proxy ngược lại.",
   "Forgot_password": "Quên mật khẩu",
   "Forgot_Password_Description": "Bạn có thể sử dụng các placeholder sau: <br/><ul><li>[Forget_Password_Url] cho URL khôi phục mật khẩu.</li><li>[name], [fname], [lname] tương ứng cho tên, họ hoặc họ của người dùng, tương ứng.</li><li>[email] cho email của người dùng.</li><li>[Site_Name] và [Site_URL] cho Tên Ứng dụng và URL tương ứng.</li></ul>",
+<<<<<<< HEAD
   "Forgot_Password_Email": "Nhấp vào <a href=\"[Forgot_Password_Url]\">ở đây</a> để đặt lại mật khẩu của bạn.",
+=======
+  "Forgot_Password_Email": "Nhấp vào <a href = \"[Forget_Password_Url]\">ở đây</a>để đặt lại mật khẩu của bạn.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Forgot_Password_Email_Subject": "[Site_Name] - Phục hồi mật khẩu",
   "Forgot_password_section": "Quên mật khẩu",
   "Forward": "Chuyển tiếp",
@@ -1183,14 +1273,20 @@
   "From": "Gửi từ",
   "From_Email": "Từ Email",
   "From_email_warning": "<b>Cảnh báo</b>: Trường <b>Từ</b>tùy thuộc vào cài đặt máy chủ Email của bạn.",
+<<<<<<< HEAD
   "Gaming": "Chơi game",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "General": "Chung",
   "github_no_public_email": "Bạn không có bất kỳ email nào dưới dạng email công khai trong tài khoản GitHub của mình",
   "Give_a_unique_name_for_the_custom_oauth": "Cho một tên duy nhất cho tùy chỉnh oauth",
   "Give_the_application_a_name_This_will_be_seen_by_your_users": "Cung cấp cho ứng dụng một cái tên. Người dùng của bạn sẽ nhìn thấy điều này.",
   "Global": "Toàn cầu",
   "Global_Search": "Tìm kiếm chung",
+<<<<<<< HEAD
   "Go_to_your_workspace": "Đến workspace của bạn",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Google_Vision_usage_limit_exceeded": "Đã vượt quá giới hạn sử dụng Google Vision",
   "GoogleCloudStorage": "Google Cloud Storage",
   "GoogleNaturalLanguage_ServiceAccount_Description": "Tệp JSON chính của tài khoản dịch vụ. Bạn có thể tìm thêm thông tin [ở đây] (https://cloud.google.com/natural-language/docs/common/auth#set_up_a_service_account)",
@@ -1214,14 +1310,20 @@
   "Government": "Chính phủ",
   "Group_by_Type": "Nhóm theo loại",
   "Group_favorites": "Gom nhóm yêu thích",
+<<<<<<< HEAD
   "Group_mentions_disabled_x_members": "Lệnh nhắc trong nhóm như `@all` và `@here` đã được vô hiệu hóa trong những phòng có số lượng thành viên trên __total__",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Group_mentions_only": "Chỉ những tin nhóm được đề cập đến",
   "Guest_Pool": "Pool khách",
   "Hash": "Hash",
   "Header": "Đầu trang",
   "Header_and_Footer": "Đầu trang và cuối trang",
+<<<<<<< HEAD
   "Healthcare_and_Pharmaceutical": "Chăm sóc sức khỏe/Dược phẩm",
   "Help_Center": "Trung tâm trợ giúp",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Helpers": "Helpers",
   "Hex_Color_Preview": "Xem trước Màu Hex",
   "Hidden": "Ẩn",
@@ -1249,8 +1351,11 @@
   "How_responsive_was_the_chat_agent": "Agent đáp lại có nhanh không?",
   "How_satisfied_were_you_with_this_chat": "Bạn cảm thấy hài lòng với cuộc trò chuyện này như thế nào?",
   "How_to_handle_open_sessions_when_agent_goes_offline": "Làm thế nào để xử lý phiên mở khi agent ngoại tuyến",
+<<<<<<< HEAD
   "Idle_Time_Limit": "Giới hạn thời gian rỗi",
   "Idle_Time_Limit_Description": "Khoảng thời gian cho đến khi trạng thái thay đổi. Giá trị cần phải bằng giây.",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "If_this_email_is_registered": "Nếu email này đã được đăng ký, chúng tôi sẽ gửi hướng dẫn về cách đặt lại mật khẩu của bạn. Nếu bạn không nhận được email sớm, vui lòng quay lại và thử lại.",
   "If_you_are_sure_type_in_your_password": "Nếu bạn chắc chắn nhập vào mật khẩu của mình:",
   "If_you_are_sure_type_in_your_username": "Nếu bạn chắc chắn nhập vào tên người dùng của mình:",
@@ -1264,8 +1369,11 @@
   "Iframe_Integration_send_enable_Description": "Gửi sự kiện đến cửa sổ chính",
   "Iframe_Integration_send_target_origin": "Nguồn đích gửi đến",
   "Iframe_Integration_send_target_origin_Description": "Nguồn với tiền tố giao thức, nơi những lệnh được gửi đến ví dụ: 'https: // localhost', hoặc * để cho phép gửi đến bất cứ đâu.",
+<<<<<<< HEAD
   "Ignore": "Bỏ qua",
   "Ignored": "Làm ngơ",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "IMAP_intercepter_already_running": "Bộ phận giải quyết IMAP đã chạy",
   "IMAP_intercepter_Not_running": "Dấu chấm hỏi IMAP Không chạy",
   "Impersonate_next_agent_from_queue": "Mạo danh tác nhân kế tiếp từ hàng đợi",
@@ -1279,6 +1387,10 @@
   "Importer_From_Description": "Nhập dữ liệu __from__ vào Rocket.Chat.",
   "Importer_HipChatEnterprise_BetaWarning": "Xin lưu ý rằng phần nhập dữ liệu này vẫn đang trong quá trình hoàn thiện, hãy báo cáo bất kỳ lỗi nào xảy ra tại GitHub:",
   "Importer_HipChatEnterprise_Information": "Tệp được tải lên phải là tệp được giải mã tar.gz, vui lòng đọc tài liệu để biết thêm thông tin:",
+<<<<<<< HEAD
+=======
+  "Importer_Slack_Users_CSV_Information": "Tệp được tải lên phải là tệp xuất của Người dùng Slack, tệp CSV. Xem ở đây để biết thêm thông tin:",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Importer_import_cancelled": "Nhập dữ liệu bị hủy.",
   "Importer_import_failed": "Đã xảy ra lỗi khi chạy.",
   "Importer_importing_channels": "Nhập các kênh.",
@@ -1351,14 +1463,23 @@
   "Integrations_Outgoing_Type_SendMessage": "Tin nhắn đã gửi",
   "Integrations_Outgoing_Type_UserCreated": "Người dùng đã tạo",
   "InternalHubot": "Hubot nội bộ",
+<<<<<<< HEAD
   "InternalHubot_EnableForChannels": "Bật cho các kênh công cộng",
   "InternalHubot_EnableForDirectMessages": "Bật cho tin nhắn trực tiếp",
   "InternalHubot_EnableForPrivateGroups": "Bật cho kênh riêng tư",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "InternalHubot_PathToLoadCustomScripts": "Thư mục chứa các tập script",
   "InternalHubot_reload": "Tải lại các tập lệnh",
   "InternalHubot_ScriptsToLoad": "Các script để nạp",
   "InternalHubot_ScriptsToLoad_Description": "Vui lòng nhập một danh sách các tập lệnh được phân cách bằng dấu phẩy để tải từ thư mục tùy chỉnh của bạn",
   "InternalHubot_Username_Description": "Đây phải là tên người dùng hợp lệ của một bot được đăng ký trên máy chủ của bạn.",
+<<<<<<< HEAD
+=======
+  "InternalHubot_EnableForChannels": "Bật cho các kênh công cộng",
+  "InternalHubot_EnableForDirectMessages": "Bật cho tin nhắn trực tiếp",
+  "InternalHubot_EnableForPrivateGroups": "Bật cho kênh riêng tư",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Invalid_confirm_pass": "Xác nhận mật khẩu không khớp với mật khẩu",
   "Invalid_email": "Email nhập vào không hợp lệ",
   "Invalid_Export_File": "Tệp được tải lên không phải là tệp xuất%s hợp lệ.",
@@ -1375,7 +1496,11 @@
   "Invisible": "Vô hình",
   "Invitation": "Lời mời",
   "Invitation_HTML": "HTML mời",
+<<<<<<< HEAD
   "Invitation_HTML_Default": "<h1>Bạn đã được mời đến <strong>[Site_Name]</strong></h1><p>Đi đến [Site_URL] và thử giải pháp trò chuyện nguồn mở tốt nhất hiện có ngay hôm nay!</p>",
+=======
+  "Invitation_HTML_Default": "<h2>Bạn đã được mời đến <h1>[Site_Name]</h1></h2><p>Đi đến [Site_URL] và thử giải pháp trò chuyện nguồn mở tốt nhất hiện có ngay hôm nay!</p>",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Invitation_HTML_Description": "Bạn có thể sử dụng các placeholder sau: <br/><ul><li>[email] cho email người nhận.</li><li>[Site_Name] và [Site_URL] cho Tên Ứng dụng và URL tương ứng.</li></ul>",
   "Invitation_Subject": "Chủ đề Lời mời",
   "Invitation_Subject_Default": "Bạn đã được mời tham gia [Site_Name]",
@@ -1389,9 +1514,12 @@
   "IRC_Channel_Users_End": "Kết thúc đầu ra của lệnh NAMES.",
   "IRC_Description": "Internet Relay Chat (IRC) là một công cụ truyền thông nhóm dựa trên văn bản. Người dùng tham gia các kênh được đặt tên duy nhất, hoặc các phòng, để thảo luận mở. IRC cũng hỗ trợ tin nhắn cá nhân giữa người dùng cá nhân và khả năng chia sẻ tập tin. Gói này tích hợp các lớp chức năng này với Rocket.Chat.",
   "IRC_Enabled": "Thử tích hợp hỗ trợ IRC. Thay đổi giá trị này yêu cầu phải khởi động lại Rocket.Chat.",
+<<<<<<< HEAD
   "IRC_Enabled_Alert": "Hỗ trợ IRC là một công việc đang được tiến hành. Sử dụng trên một hệ thống sản xuất không được khuyến khích tại thời điểm này.",
   "IRC_Federation": "Liên đoàn IRC",
   "IRC_Federation_Disabled": "Liên kết IRC bị tắt.",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "IRC_Hostname": "Máy chủ lưu trữ IRC để kết nối.",
   "IRC_Login_Fail": "Kết quả khi kết nối không thành công với máy chủ IRC.",
   "IRC_Login_Success": "Kết quả khi kết nối thành công với máy chủ IRC.",
@@ -1408,7 +1536,11 @@
   "Issue_Links": "Liên kết theo dõi sự cố",
   "IssueLinks_Incompatible": "Cảnh báo: không kích hoạt tính năng này và 'Hex Color Preview' cùng một lúc.",
   "IssueLinks_LinkTemplate": "Mẫu cho liên kết sự cố",
+<<<<<<< HEAD
   "IssueLinks_LinkTemplate_Description": "Mẫu cho liên kết sự cố; %s sẽ được thay thế bằng số phát hành.",
+=======
+  "IssueLinks_LinkTemplate_Description": "Mẫu cho liên kết sự cố; % s sẽ được thay thế bằng số phát hành.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "It_works": "Nó hoạt động",
   "italics": "chữ in nghiêng",
   "Jitsi_Chrome_Extension": "Id tiện ích mở rộng của Chrome",
@@ -1444,8 +1576,13 @@
   "Keyboard_Shortcuts_Keys_5": "<kbd>Command</kbd>(hoặc <kbd>Alt</kbd>) + <kbd>Mũi tên phải</kbd>",
   "Keyboard_Shortcuts_Keys_6": "<kbd>Command</kbd>(hoặc <kbd>Alt</kbd>) + <kbd>Mũi tên xuống</kbd>",
   "Keyboard_Shortcuts_Keys_7": "<kbd>Shift</kbd>+ <kbd>Nhập</kbd>",
+<<<<<<< HEAD
   "Keyboard_Shortcuts_Move_To_Beginning_Of_Message": "Chuyển đến tin đầu tiên chưa đọc",
   "Keyboard_Shortcuts_Move_To_End_Of_Message": "Chuyển đến tin cuối cùng chưa đọc",
+=======
+  "Keyboard_Shortcuts_Move_To_Beginning_Of_Message": "Di chuyển đến đầu tin nhắn",
+  "Keyboard_Shortcuts_Move_To_End_Of_Message": "Di chuyển đến cuối tin nhắn",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Keyboard_Shortcuts_New_Line_In_Message": "Dòng mới trong phần soạn tin",
   "Keyboard_Shortcuts_Open_Channel_Slash_User_Search": "Mở kênh / Tìm kiếm người dùng",
   "Keyboard_Shortcuts_Title": "Các phím tắt bàn phím",
@@ -1457,8 +1594,11 @@
   "Last_login": "Lân đăng nhập cuôi",
   "Last_Message_At": "Tin nhắn cuối cùng ở",
   "Last_seen": "Nhìn thấy lần cuối",
+<<<<<<< HEAD
   "Last_Message": "Tin nhắn cuối cùng",
   "Launched_successfully": "Khởi động hoàn thành",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Layout": "Bố cục",
   "Layout_Home_Body": "Trang chủ Body",
   "Layout_Home_Title": "Tiêu đề Trang chủ",
@@ -1468,6 +1608,21 @@
   "Layout_Sidenav_Footer_description": "Kích thước chân trang là 260 x 70px",
   "Layout_Terms_of_Service": "Điều khoản dịch vụ",
   "LDAP": "LDAP",
+<<<<<<< HEAD
+=======
+  "LDAP_CA_Cert": "Chứng chỉ CA",
+  "LDAP_Connect_Timeout": "Thời gian chờ kết nối (ms)",
+  "LDAP_Default_Domain": "Tên miền mặc định",
+  "LDAP_Default_Domain_Description": "Nếu được cung cấp Tên miền Mặc định sẽ được sử dụng để tạo một email duy nhất cho người dùng khi email không được nhập từ LDAP. Email sẽ được gắn kết dưới dạng `username @ default_domain` hoặc` unique_id @ default_domain`.<br/>Ví dụ: `rocket.chat`",
+  "LDAP_Description": "LDAP là một cơ sở dữ liệu có thứ bậc mà nhiều công ty sử dụng để cung cấp single sign on - một cơ sở để chia sẻ một mật khẩu giữa nhiều trang web và dịch vụ. Để biết thông tin cấu hình nâng cao và các ví dụ, vui lòng tham khảo wiki của chúng tôi: https://rocket.chat/docs/administrator-guides/authentication/ldap/.",
+  "LDAP_BaseDN": "Distinguished Name (DN) cơ sở",
+  "LDAP_BaseDN_Description": "Distinguished Name (DN) đủ điều kiện của một cây con LDAP bạn muốn tìm kiếm người dùng và nhóm. Bạn có thể thêm bao nhiêu tùy thích; tuy nhiên, mỗi nhóm phải được xác định trong cùng một cơ sở miền với những người dùng thuộc về nó. Ví dụ: `ou = Người dùng + ou = Dự án, dc = Ví dụ, dc = com`. Nếu bạn chỉ định các nhóm người dùng bị hạn chế, chỉ những người dùng thuộc các nhóm đó mới có phạm vi. Chúng tôi khuyên bạn nên chỉ định mức cao nhất của cây thư mục LDAP làm cơ sở tên miền của bạn và sử dụng bộ lọc tìm kiếm để kiểm soát quyền truy cập.",
+  "LDAP_User_Search_Field": "Trường tìm kiếm",
+  "LDAP_User_Search_Field_Description": "Thuộc tính LDAP xác định người dùng LDAP đang cố gắng xác thực. Trường này phải là `sAMAccountName` cho hầu hết các cài đặt Active Directory, nhưng có thể là` uid` cho các giải pháp LDAP khác, chẳng hạn như OpenLDAP. Bạn có thể sử dụng `mail` để xác định người dùng bằng email hoặc bất kỳ thuộc tính nào bạn muốn. <br>Bạn có thể sử dụng nhiều giá trị được phân cách bằng dấu phẩy để cho phép người dùng đăng nhập sử dụng nhiều định danh như tên người dùng hoặc email.",
+  "LDAP_User_Search_Filter": "Bộ lọc",
+  "LDAP_User_Search_Filter_Description": "Nếu được chỉ định, chỉ những người dùng phù hợp với bộ lọc này mới được phép đăng nhập. Nếu không có bộ lọc được chỉ định, tất cả người dùng trong phạm vi của tên miền được chỉ định sẽ có thể đăng nhập.<br/>Ví dụ: cho Active Directory `memberOf = cn = ROCKET_CHAT, ou = Nhóm chung '.<br/>Ví dụ: cho OpenLDAP (tìm kiếm kết hợp mở rộng) `ou: dn: = ROCKET_CHAT`.",
+  "LDAP_User_Search_Scope": "Phạm vi",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "LDAP_Authentication": "Bật",
   "LDAP_Authentication_Password": "Mật khẩu",
   "LDAP_Authentication_UserDN": "DN người dùng",
@@ -1507,7 +1662,10 @@
   "LDAP_Idle_Timeout": "Thời gian chờ không hoạt động (ms)",
   "LDAP_Idle_Timeout_Description": "Có bao nhiêu miligiây đợi sau khi hoạt động LDAP mới nhất cho đến khi đóng kết nối. (Mỗi thao tác sẽ mở một kết nối mới)",
   "LDAP_Import_Users_Description": "Quá trình đồng bộ hóa True sẽ nhập tất cả người dùng LDAP <br/> *Chú ý* Chỉ định bộ lọc tìm kiếm để không nhập người dùng vượt quá.",
+<<<<<<< HEAD
   "LDAP_Internal_Log_Level": "Mức Đăng nhập Nội bộ",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "LDAP_Login_Fallback": "Đăng nhập Fallback",
   "LDAP_Login_Fallback_Description": "Nếu đăng nhập trên LDAP không thành công sẽ thử đăng nhập vào hệ thống tài khoản mặc định / địa phương. Có ích khi hệ thống LDAP bị lỗi vì lý do nào đó.",
   "LDAP_Merge_Existing_Users": "Hợp nhất Người dùng Hiện tại",
@@ -1518,6 +1676,23 @@
   "LDAP_Reconnect_Description": "Cố gắng kết nối lại tự động khi kết nối bị gián đoạn bởi một số lý do trong khi thực hiện các hoạt động",
   "LDAP_Reject_Unauthorized": "Từ chối Không hợp lệ",
   "LDAP_Reject_Unauthorized_Description": "Vô hiệu hoá tùy chọn này để cho phép các chứng chỉ không thể xác minh. Thông thường Chứng chỉ Tự ký sẽ yêu cầu tùy chọn này bị vô hiệu hóa để hoạt động",
+<<<<<<< HEAD
+=======
+  "LDAP_Sync_User_Avatar": "Đồng bộ hóa Hình đại diện Người dùng",
+  "LDAP_Sync_Now": "Đồng bộ hóa ngay bây giờ",
+  "LDAP_Sync_Now_Description": "Sẽ thực hiện **Background Sync** thay vì chờ **Sync Interval** ngay cả khi **Background Sync** là Sai.<br/>Tác vụ này không đồng bộ, vui lòng xem nhật ký để biết thêm thông tin về quá trình",
+  "LDAP_Background_Sync": "Đồng bộ hóa nền",
+  "LDAP_Background_Sync_Interval": "Khoảng giữa các lần đồng bộ hóa nền",
+  "LDAP_Background_Sync_Interval_Description": "Khoảng giữa các lần đồng bộ hóa. Ví dụ \"mỗi 24 giờ\" hoặc \"vào ngày đầu tiên trong tuần\", thêm ví dụ tại [Cron Text Parser] (http://bunkat.github.io/later/parsers.html#text)",
+  "LDAP_Background_Sync_Import_New_Users": "Đồng bộ hóa nền Nhập người dùng mới",
+  "LDAP_Background_Sync_Import_New_Users_Description": "Sẽ nhập tất cả người dùng (dựa trên tiêu chí lọc của bạn) tồn tại trong LDAP và không tồn tại trong Rocket.Chat",
+  "LDAP_Background_Sync_Keep_Existant_Users_Updated": "Cập nhật Đồng bộ hoá Người dùng Hiện tại",
+  "LDAP_Background_Sync_Keep_Existant_Users_Updated_Description": "Sẽ đồng bộ hình đại diện, trường, tên người dùng, v.v ... (dựa trên cấu hình của bạn) của tất cả người dùng đã được nhập từ LDAP trên ** Thời gian đồng bộ hóa **",
+  "LDAP_Sync_User_Data": "Đồng bộ hóa dữ liệu người dùng",
+  "LDAP_Sync_User_Data_Description": "Giữ dữ liệu người dùng đồng bộ với máy chủ trên ** đăng nhập ** hoặc trên ** nền đồng bộ ** (ví dụ: tên, email).",
+  "LDAP_Sync_User_Data_FieldMap": "FieldMap dữ liệu người dùng",
+  "LDAP_Sync_User_Data_FieldMap_Description": "Cấu hình cách các trường tài khoản người dùng (như email) được populate từ một bản ghi trong LDAP (khi tìm thấy). <br/>Ví dụ: `{\" cn \":\" tên \",\" mail \":\" email \"}` sẽ chọn tên người có thể đọc được của một người từ thuộc tính cn và email của họ từ thuộc tính mail. Ngoài ra, có thể sử dụng các biến, ví dụ: `{\" # {givenName} # {sn} \":\" tên \",\" mail \":\" email \"}` sử dụng kết hợp tên và họ của người dùng cho tên Rocket.Chat.<br/> Các trường có sẵn trong Rocket.Chat: `name`,` email` và `customFields`.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "LDAP_Search_Page_Size": "Kích thước Trang Tìm kiếm",
   "LDAP_Search_Page_Size_Description": "Số mục nhập tối đa mỗi trang kết quả sẽ trở lại để được xử lý",
   "LDAP_Search_Size_Limit": "Giới hạn Kích thước Tìm kiếm",
@@ -1541,10 +1716,15 @@
   "LDAP_User_Search_Scope": "Phạm vi",
   "LDAP_Username_Field": "Trường tên người dùng",
   "LDAP_Username_Field_Description": "Trường nào sẽ được sử dụng làm tên đăng nhập * cho người dùng mới. Để trống để sử dụng tên người dùng được thông báo trên trang đăng nhập.<br/>Bạn cũng có thể sử dụng các thẻ khuôn mẫu, như `# {givenName}.<br/>Giá trị mặc định là` sAMAccountName`.",
+<<<<<<< HEAD
+=======
+  "Execute_Synchronization_Now": "Thực hiện đồng bộ ngay bây giờ",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Lead_capture_email_regex": "Lead capture email regex",
   "Lead_capture_phone_regex": "Lead capture phone regex",
   "Least_Amount": "Số lượng ít nhất",
   "leave-c": "Rời khỏi kênh",
+  "leave-d": "Rời khỏi tin nhắn trực tiếp",
   "leave-p": "Rời khỏi Nhóm Riêng tư",
   "Leave_Group_Warning": "Bạn có chắc chắn muốn thoát khỏi nhóm \"%s\" không?",
   "Leave_Livechat_Warning": "Bạn có chắc chắn muốn thoát khỏi livechat với \"%s\" không?",
@@ -1561,17 +1741,25 @@
   "Livechat_enabled": "Bật Livechat",
   "Livechat_Facebook_API_Key": "Khóa API của OmniChannel",
   "Livechat_Facebook_API_Secret": "OmniChannel API Secret",
+<<<<<<< HEAD
   "Livechat_Facebook_Enabled": "Tích hợp Facebook",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Livechat_forward_open_chats": "Chuyển tiếp các cuộc trò chuyện mở",
   "Livechat_forward_open_chats_timeout": "Thời gian chờ (tính bằng giây) để chuyển tiếp cuộc trò chuyện",
   "Livechat_guest_count": "Khách truy cập",
   "Livechat_Inquiry_Already_Taken": "Yêu cầu Livechat đã được thực hiện",
   "Livechat_managers": "Quản lý Livechat",
   "Livechat_offline": "Livechat offline",
+  "Livechat_offline_title": "Tiêu đề",
+  "Livechat_offline_message": "Hướng dẫn",
   "Livechat_online": "Livechat trực tuyến",
   "Livechat_open_inquiery_show_connecting": "Hiển thị thông báo kết nối thay vì nhập khi khách chưa kết nối với agent",
   "Livechat_Queue": "Hàng đợi Livechat",
+<<<<<<< HEAD
   "Livechat_registration_form": "Form đăng ký",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Livechat_room_count": "Số phòng Livechat",
   "Livechat_Routing_Method": "Phương pháp định tuyến Livechat",
   "Livechat_Take_Confirm": "Bạn có muốn đưa khách hàng này?",
@@ -1591,6 +1779,7 @@
   "Loading_more_from_history": "Tải thêm từ lịch sử",
   "Loading_suggestion": "Đang tải đề xuất",
   "Localization": "Nội địa hoá",
+<<<<<<< HEAD
   "Log_Exceptions_to_Channel_Description": "Một kênh sẽ nhận được tất cả các Exception bắt được. Để trống để bỏ qua Exception.",
   "Log_Exceptions_to_Channel": "Log Exception vào kênh",
   "Log_File": "Log tệp và dòng",
@@ -1602,6 +1791,13 @@
   "Log_Trace_Subscriptions_Filter": "Bộ lọc đăng ký theo dõi",
   "Log_Trace_Subscriptions_Filter_Description": "Văn bản ở đây sẽ được đánh giá là RegExp (`new RegExp ('text')`). Giữ trống để hiển thị dấu vết của mọi cuộc gọi.",
   "Log_Trace_Subscriptions": "Theo dõi cuộc gọi đăng ký",
+=======
+  "Log_Exceptions_to_Channel": "Log Exception vào kênh",
+  "Log_Exceptions_to_Channel_Description": "Một kênh sẽ nhận được tất cả các Exception bắt được. Để trống để bỏ qua Exception.",
+  "Log_File": "Log tệp và dòng",
+  "Log_Level": "Mức độ log",
+  "Log_Package": "Log Package",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Log_View_Limit": "Log giới hạn view",
   "Logged_out_of_other_clients_successfully": "Đăng nhập thành công từ các khách hàng khác",
   "Login": "Đăng nhập",
@@ -1611,12 +1807,20 @@
   "Logout_Others": "Logout Từ Khác Đăng nhập Địa điểm",
   "mail-messages": "Mail tin nhắn",
   "mail-messages_description": "Quyền sử dụng tùy chọn mail tin nhắn",
+<<<<<<< HEAD
   "Mail_Message_Invalid_emails": "Bạn đã cung cấp một hoặc nhiều email không hợp lệ:%s",
+=======
+  "Mail_Message_Invalid_emails": "Bạn đã cung cấp một hoặc nhiều email không hợp lệ:% s",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Mail_Message_Missing_to": "Bạn phải chọn một hoặc nhiều người dùng hoặc cung cấp một hoặc nhiều địa chỉ email, được phân cách bằng dấu phẩy.",
   "Mail_Message_No_messages_selected_select_all": "Bạn chưa chọn bất kỳ tin nhắn nào",
   "Mail_Messages": "Mail tin nhắn",
   "Mail_Messages_Instructions": "Chọn tin nhắn bạn muốn gửi qua email bằng cách nhấp vào các tin nhắn",
+<<<<<<< HEAD
   "Mail_Messages_Subject": "Đây là một phần được chọn của%s tin nhắn",
+=======
+  "Mail_Messages_Subject": "Đây là một phần được chọn của% s tin nhắn",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Mailer": "Mailer",
   "Mailer_body_tags": "Bạn <b>phải</b>sử dụng [hủy đăng ký] đối với liên kết bỏ đăng ký.<br/>Bạn có thể sử dụng [name], [fname], [lname] cho tên, họ hoặc họ của người dùng, tương ứng.<br/> Bạn có thể sử dụng [email] cho email của người dùng.",
   "Mailing": "gửi thư",
@@ -1695,6 +1899,7 @@
   "Message_BadWordsFilterList": "Thêm từ ngữ xấu vào Danh sách đen",
   "Message_BadWordsFilterListDescription": "Thêm danh sách các từ xấu được lọc bởi dấu phẩy để lọc",
   "Message_DateFormat": "Định dạng ngày tháng",
+<<<<<<< HEAD
   "Message_DateFormat_Description": "Xem thêm: <a href=\"http://momentjs.com/docs/#/displaying/format/\" target=\"momemt\" >Moment.js</a>",
   "Message_deleting_blocked": "Không thể xóa tin nhắn này nữa",
   "Message_editing": "Chỉnh sửa tin nhắn",
@@ -1702,6 +1907,15 @@
   "Message_ErasureType_Delete": "Xóa Tất cả Tin nhắn",
   "Message_ErasureType_Description": "Xác định phải làm gì với thông báo của người dùng đã xóa tài khoản của họ.",
   "Message_ErasureType_Keep": "Giữ Tin nhắn và Tên Người dùng",
+=======
+  "Message_DateFormat_Description": "Xem thêm: <a href = \"http://momentjs.com/docs/#/displaying/format/\" target = \"momemt\" >Moment.js</a>",
+  "Message_deleting_blocked": "Không thể xóa tin nhắn này nữa",
+  "Message_editing": "Chỉnh sửa tin nhắn",
+  "Message_ErasureType": "Loại tin nhắn xóa",
+  "Message_ErasureType_Description": "Xác định phải làm gì với thông báo của người dùng đã xóa tài khoản của họ.",
+  "Message_ErasureType_Keep": "Giữ Tin nhắn và Tên Người dùng",
+  "Message_ErasureType_Delete": "Xóa Tất cả Tin nhắn",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Message_ErasureType_Unlink": "Xóa liên kết giữa người dùng và tin nhắn",
   "Message_GlobalSearch": "Tìm kiếm toàn cầu",
   "Message_GroupingPeriod": "Thời gian gom nhóm tin nhắn (tính bằng giây)",
@@ -1711,7 +1925,10 @@
   "Message_HideType_ru": "Ẩn tin báo \"Người dùng đã xóa\"",
   "Message_HideType_uj": "Ẩn tin báo \"Tham gia Người dùng\"",
   "Message_HideType_ul": "Ẩn tin báo \"Người dùng Nghỉ phép\"",
+<<<<<<< HEAD
   "Message_Ignored": "Tin nhắn này đã bị bỏ qua",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Message_info": "Thông tin tin",
   "Message_KeepHistory": "Giữ lịch sử thay đỗi mỗi tin nhắn",
   "Message_MaxAll": "Kích thước kênh tối đa cho TẤT CẢ tin nhắn",
@@ -1758,23 +1975,37 @@
   "More_direct_messages": "Thêm tin nhắn trực tiếp",
   "More_groups": "Thêm các nhóm riêng",
   "More_unreads": "Thêm unreads",
+<<<<<<< HEAD
   "Move_beginning_message": "`%s` - Chuyển đến tin đầu tiên chưa đọc",
   "Move_end_message": "`%s` - Chuyển đến tin cuối cùng chưa đọc",
+=======
+  "Move_beginning_message": "`% s` - Di chuyển đến đầu tin nhắn",
+  "Move_end_message": "`% s` - Di chuyển đến cuối tin nhắn",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Msgs": "Tin nhắn",
   "multi": "đa",
   "multi_line": "nhiều dòng",
   "mute-user": "Tắt tiếng Người dùng",
   "mute-user_description": "Cho phép để ẩn những người dùng khác trong cùng một kênh",
+<<<<<<< HEAD
   "Mute_all_notifications": "Ẩn tất cả thông báo",
   "Mute_Focused_Conversations": "Tắt thông báo khi đang ở trong cuộc hội thoại",
   "Mute_Group_Mentions": "Tắt tiếng @all và @here đề cập",
+=======
+  "Mute_Focused_Conversations": "Tắt thông báo khi đang ở trong cuộc hội thoại",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Mute_someone_in_room": "Ẩn người trong phòng",
   "Mute_user": "Ẩn người dùng",
   "Muted": "Ẩn",
   "My_Account": "Tài khoản của tôi",
   "My_location": "Vị trí của tôi",
+<<<<<<< HEAD
   "n_messages": "%s tin nhắn",
   "N_new_messages": "%s tin nhắn mới",
+=======
+  "n_messages": "% s tin nhắn",
+  "N_new_messages": "% s tin nhắn mới",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Name": "Tên",
   "Name_cant_be_empty": "Tên không thể để trống",
   "Name_of_agent": "Tên của agent",
@@ -1785,7 +2016,11 @@
   "New_Custom_Field": "Trường tùy chỉnh mới",
   "New_Department": "Phòng mới",
   "New_integration": "Tích hợp mới",
+<<<<<<< HEAD
   "New_line_message_compose_input": "`%s` - Dòng mới trong phần soạn tin nhắn",
+=======
+  "New_line_message_compose_input": "`% s` - Dòng mới trong phần soạn tin nhắn",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "New_logs": "Nhật ký mới",
   "New_Message_Notification": "Thông báo tin nhắn mới",
   "New_messages": "Các tin nhắn mới",
@@ -1798,6 +2033,7 @@
   "New_Trigger": "Trình kích hoạt mới",
   "New_version_available_(s)": "Đã có phiên bản mới (%s)",
   "New_videocall_request": "Yêu cầu Gọi điện video mới",
+<<<<<<< HEAD
   "New_visitor_navigation": "Điều hướng mới: __history__",
   "No_available_agents_to_transfer": "Không có agent nào có thể chuyển",
   "No_channel_with_name_%s_was_found": "Không tìm thấy kênh có tên <strong>\"%s\"</strong>!",
@@ -1805,6 +2041,14 @@
   "No_direct_messages_yet": "Không có tin nhắn trực tiếp.",
   "No_Encryption": "Không có Mã hóa",
   "No_group_with_name_%s_was_found": "Không tìm thấy nhóm riêng tư có tên <strong>\"%s\"</strong>!",
+=======
+  "No_available_agents_to_transfer": "Không có agent nào có thể chuyển",
+  "No_channel_with_name_%s_was_found": "Không tìm thấy kênh có tên <strong>\"% s\"</strong>!",
+  "No_channels_yet": "Bạn chưa thuộc bất kỳ kênh nào",
+  "No_direct_messages_yet": "Không có tin nhắn trực tiếp.",
+  "No_Encryption": "Không có Mã hóa",
+  "No_group_with_name_%s_was_found": "Không tìm thấy nhóm riêng tư có tên <strong>\"% s\"</strong>!",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "No_groups_yet": "Bạn chưa có Nhóm riêng tư.",
   "No_integration_found": "Không có tích hợp nào được tìm thấy bởi id được cung cấp.",
   "No_livechats": "Bạn không có livechats",
@@ -1969,7 +2213,10 @@
   "Private_Group": "Nhóm riêng tư",
   "Private_Groups": "Nhóm riêng tư",
   "Private_Groups_list": "Danh sách các Nhóm riêng tư",
+<<<<<<< HEAD
   "Private_Team": "Nhóm riêng tư",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Profile": "Hồ sơ",
   "Profile_details": "Chi tiết hồ sơ",
   "Profile_picture": "Ảnh đại diện",
@@ -2059,7 +2306,10 @@
   "Reset": "Cài lại",
   "Reset_password": "Đặt lại mật khẩu",
   "Reset_section_settings": "Khôi phục cài đặt",
+<<<<<<< HEAD
   "Reset_Connection": "Đặt lại kết nối",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Restart": "Khởi động lại",
   "Restart_the_server": "Khởi động lại máy chủ",
   "Retail": "Người bán lẻ",
@@ -2115,7 +2365,10 @@
   "SAML_Custom_Issuer": "Tùy chỉnh Issuer",
   "SAML_Custom_Logout_Behaviour": "Hành vi đăng xuất",
   "SAML_Custom_Logout_Behaviour_End_Only_RocketChat": "Chỉ đăng xuất từ ​​Rocket.Chat",
+<<<<<<< HEAD
   "SAML_Custom_Logout_Behaviour_Terminate_SAML_Session": "Chấm dứt phiên SAML",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "SAML_Custom_Private_Key": "Nội dung Private Key",
   "SAML_Custom_Provider": "Tùy chỉnh Provider",
   "SAML_Custom_Public_Cert": "Nội dung Cert Contents",
@@ -2168,11 +2421,18 @@
   "Send_invitation_email_error": "Bạn chưa cung cấp địa chỉ email hợp lệ.",
   "Send_invitation_email_info": "Bạn có thể gửi nhiều lời mời qua email cùng một lúc.",
   "Send_invitation_email_success": "Bạn đã gửi thành công thư mời tới các địa chỉ sau:",
+<<<<<<< HEAD
   "Send_request_on_agent_message": "Gửi Yêu cầu về Tin nhắn Agent",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Send_request_on_chat_close": "Gửi yêu cầu khi đóng Trò chuyện",
   "Send_request_on_lead_capture": "Gửi yêu cầu khi lead capture",
   "Send_request_on_offline_messages": "Gửi Yêu cầu Tin nhắn Ngoại tuyến",
   "Send_request_on_visitor_message": "Gửi yêu cầu về Tin nhắn của khách",
+<<<<<<< HEAD
+=======
+  "Send_request_on_agent_message": "Gửi Yêu cầu về Tin nhắn Agent",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Send_Test": "Gửi kiểm tra",
   "Send_Visitor_navigation_history_as_a_message": "Gửi lịch sử điều hướng khách truy cập dưới dạng tin nhắn",
   "Send_visitor_navigation_history_on_request": "Gửi Lịch sử điều hướng của khách truy cập theo yêu cầu",
@@ -2208,7 +2468,11 @@
   "Show_all": "Hiển thị tất cả",
   "Show_Avatars": "Hiển thị hình đại diện",
   "Show_counter": "Hiển thị bộ đếm",
+<<<<<<< HEAD
   "Show_email_field": "Hiển thị trường email",
+=======
+  "Show_room_counter_on_sidebar": "Hiển thị số phòng ở trên thanh bên",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Show_more": "Cho xem nhiều hơn",
   "Show_name_field": "Hiển thị trường tên",
   "show_offline_users": "hiển thị người dùng ngoại tuyến",
@@ -2216,7 +2480,10 @@
   "Show_only_online": "Chỉ hiển thị trực tuyến",
   "Show_preregistration_form": "Hiển thị Mẫu đăng ký",
   "Show_queue_list_to_all_agents": "Hiển thị danh sách hàng đợi cho tất cả các agent",
+<<<<<<< HEAD
   "Show_room_counter_on_sidebar": "Hiển thị số phòng ở trên thanh bên",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Show_the_keyboard_shortcut_list": "Hiển thị danh sách phím tắt",
   "Showing_archived_results": "<p>Hiển thị <b>%s</b>các kết quả được lưu trữ</p>",
   "Showing_online_users": "Đang hiển thị: <b>__total_showing__</b>, Trực tuyến: __online__, Tổng cộng: __total__ người dùng",
@@ -2230,9 +2497,14 @@
   "Site_Url_Description": "Ví dụ: https://chat.domain.com/",
   "Size": "Kích cỡ",
   "Skip": "Bỏ qua",
+<<<<<<< HEAD
   "Slack_Users": "Người dùng của Slack CSV",
   "SlackBridge_error": "SlackBridge đã gặp lỗi khi nhập thư của bạn ở%s:%s",
   "SlackBridge_finish": "SlackBridge đã hoàn tất nhập tin nhắn ở%s. Vui lòng tải lại để xem tất cả các tin nhắn.",
+=======
+  "SlackBridge_error": "SlackBridge đã gặp lỗi khi nhập thư của bạn ở% s:% s",
+  "SlackBridge_finish": "SlackBridge đã hoàn tất nhập tin nhắn ở% s. Vui lòng tải lại để xem tất cả các tin nhắn.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "SlackBridge_Out_All": "SlackBridge Out All",
   "SlackBridge_Out_All_Description": "Gửi tin nhắn từ tất cả các kênh hiện có trong Slack và bot đã tham gia",
   "SlackBridge_Out_Channels": "SlackBridge Out Channels",
@@ -2365,6 +2637,7 @@
   "theme-color-primary-action-color": "Màu hành động cơ bản",
   "theme-color-primary-background-color": "Màu nền cơ bản",
   "theme-color-primary-font-color": "Màu chữ cơ bản",
+<<<<<<< HEAD
   "theme-color-rc-color-alert": "Cảnh báo",
   "theme-color-rc-color-alert-light": "Cảnh báo (màu sáng)",
   "theme-color-rc-color-button-primary": "Màu nút cơ bản",
@@ -2380,6 +2653,8 @@
   "theme-color-rc-color-primary-lightest": "Cơ bản (màu sáng nhất)",
   "theme-color-rc-color-success": "Thành công",
   "theme-color-rc-color-success-light": "Thành công (màu sáng)",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "theme-color-secondary-action-color": "Màu hành động thứ cấp",
   "theme-color-secondary-background-color": "Màu nền thứ cấp",
   "theme-color-secondary-font-color": "Màu chữ thứ cấp",
@@ -2397,8 +2672,36 @@
   "theme-color-transparent-lighter": "Trong suốt (màu sáng hơn)",
   "theme-color-transparent-lightest": "Trong suốt (màu sáng nhất)",
   "theme-color-unread-notification-color": "Màu thông báo chưa đọc",
+<<<<<<< HEAD
   "theme-custom-css": "CSS tùy chỉnh",
   "theme-font-body-font-family": "Font family chữ body",
+=======
+  "theme-color-rc-color-error": "Lỗi",
+  "theme-color-rc-color-error-light": "Lỗi (màu sáng)",
+  "theme-color-rc-color-alert": "Cảnh báo",
+  "theme-color-rc-color-alert-light": "Cảnh báo (màu sáng)",
+  "theme-color-rc-color-success": "Thành công",
+  "theme-color-rc-color-success-light": "Thành công (màu sáng)",
+  "theme-color-rc-color-button-primary": "Màu nút cơ bản",
+  "theme-color-rc-color-button-primary-light": "Màu nút cơ bản (màu sáng)",
+  "theme-color-rc-color-alert-message-primary": "Màu alert cơ bản",
+  "theme-color-rc-color-alert-message-primary-background": "Màu nền alert cơ bản",
+  "theme-color-rc-color-alert-message-secondary": "Màu alert thứ cấp",
+  "theme-color-rc-color-alert-message-secondary-background": "Màu nền alert thứ cấp",
+  "theme-color-rc-color-alert-message-warning": "Màu alert cảnh báo",
+  "theme-color-rc-color-alert-message-warning-background": "Màu nền alert cảnh báo",
+  "theme-color-rc-color-primary": "Cơ bản",
+  "theme-color-rc-color-primary-darkest": "Cơ bản (màu tối nhất)",
+  "theme-color-rc-color-primary-dark": "Cơ bản (màu tối)",
+  "theme-color-rc-color-primary-light": "Cơ bản (màu sáng)",
+  "theme-color-rc-color-primary-light-medium": "Cơ bản (màu sáng trung bình)",
+  "theme-color-rc-color-primary-lightest": "Cơ bản (màu sáng nhất)",
+  "theme-color-rc-color-content": "Màu nội dung",
+  "theme-color-rc-color-link-active": "Màu chữ liên kết active",
+  "theme-custom-css": "CSS tùy chỉnh",
+  "theme-font-body-font-family": "Font family chữ body",
+  "theme-color-attention-color": "Màu chú ý",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "There_are_no_agents_added_to_this_department_yet": "Chưa có agent nào được thêm vào bộ phận này.",
   "There_are_no_applications": "Không có ứng dụng oAuth nào được thêm vào.",
   "There_are_no_applications_installed": "Hiện không có ứng dụng Rocket.Chat nào được cài đặt.",
@@ -2420,6 +2723,7 @@
   "To_install_RocketChat_Livechat_in_your_website_copy_paste_this_code_above_the_last_body_tag_on_your_site": "Để cài đặt Rocket.Chat Livechat trong trang web của bạn, hãy sao chép &amp; dán mã này vào cuối <strong>&lt; / body &gt;</strong>trên trang web của bạn.",
   "to_see_more_details_on_how_to_integrate": "để xem thêm chi tiết về cách tích hợp.",
   "To_users": "Cho người dùng",
+  "To_additional_emails": "Đến email khác",
   "Toggle_original_translated": "Chuyển đổi bản gốc / dịch",
   "Token_Access": "Truy cập Token",
   "Token_Controlled_Access": "Truy cập có Kiểm soát Token",
@@ -2434,7 +2738,10 @@
   "Tokens_Required_Input_Error": "Mã thông báo đã nhập không hợp lệ.",
   "Tokens_Required_Input_Placeholder": "Tên nội dung mã thông báo",
   "Topic": "Đề tài",
+<<<<<<< HEAD
   "Tourism": "Du lịch",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Transcript_Enabled": "Hỏi Khách xem nếu họ muốn bản ghi lại sau khi trò chuyện đã kết thúc",
   "Transcript_message": "Thông báo để hiển thị khi Yêu cầu Bản ghi",
   "Transcript_of_your_livechat_conversation": "Bản ghi cuộc trò chuyện livechat của bạn.",
@@ -2465,7 +2772,10 @@
   "UI_Click_Direct_Message": "Nhấp để tạo tin nhắn trực tiếp",
   "UI_Click_Direct_Message_Description": "Bỏ qua tab hồ sơ, thay vào đó đi thẳng vào cuộc trò chuyện",
   "UI_DisplayRoles": "Hiển thị vai trò",
+<<<<<<< HEAD
   "UI_Group_Channels_By_Type": "Nhóm kênh theo loại",
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "UI_Merge_Channels_Groups": "Hợp nhất các nhóm riêng tư với các kênh",
   "UI_Unread_Counter_Style": "Kiểu truy cập chưa đọc",
   "UI_Use_Name_Avatar": "Sử dụng Tên đầy đủ để tạo Hình đại diện Mặc định",
@@ -2480,7 +2790,11 @@
   "Unmute_user": "Bật người dùng",
   "Unnamed": "Vô danh",
   "Unpin_Message": "Bỏ gắn thông báo",
+<<<<<<< HEAD
   "Unread": "Chưa đọc",
+=======
+  "Unread_on_top": "Chưa đọc trên đầu trang",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Unread_Count": "Đếm chưa đọc",
   "Unread_Count_DM": "Đếm chưa đọc tin nhắn Trực tiếp",
   "Unread_Messages": "Tin nhắn chưa đọc",
@@ -2601,7 +2915,11 @@
   "Validate_email_address": "Xác nhận Địa chỉ Email",
   "Verification": "Xác minh",
   "Verification_Description": "Bạn có thể sử dụng các placeholder sau: <br/><ul><li>[Verification_Url] cho URL xác minh.</li><li>[name], [fname], [lname] tương ứng cho tên, họ hoặc họ của người dùng, tương ứng.</li><li>[email] cho email của người dùng.</li><li>[Site_Name] và [Site_URL] cho Tên Ứng dụng và URL tương ứng.</li></ul>",
+<<<<<<< HEAD
   "Verification_Email": "Nhấp vào <a href=\"[Verification_Url]\">ở đây</a>để xác minh tài khoản của bạn.",
+=======
+  "Verification_Email": "Nhấp vào <a href = \"[Verification_Url]\">ở đây</a>để xác minh tài khoản của bạn.",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
   "Verification_email_sent": "Gửi email xác minh",
   "Verification_Email_Subject": "[Site_Name] - Xác minh tài khoản của bạn",
   "Verified": "Đã xác minh",
@@ -2722,6 +3040,7 @@
   "Your_email_has_been_queued_for_sending": "Email của bạn đã được xếp hàng đợi để gửi",
   "Your_entry_has_been_deleted": "Mục nhập của bạn đã bị xóa.",
   "Your_file_has_been_deleted": "Tệp của bạn đã bị xóa.",
+<<<<<<< HEAD
   "Your_mail_was_sent_to_s": "MAil của bạn đã được gửi tới%s",
   "your_message": "tin nhắn của bạn",
   "your_message_optional": "tin nhắn của bạn (tùy chọn)",
@@ -2730,3 +3049,11 @@
   "Your_server_link": "Đường dẫn máy chủ của bạn",
   "Your_workspace_is_ready": "Workspace của bạn đã sẵn sàng"
 }
+=======
+  "Your_mail_was_sent_to_s": "MAil của bạn đã được gửi tới% s",
+  "your_message": "tin nhắn của bạn",
+  "your_message_optional": "tin nhắn của bạn (tùy chọn)",
+  "Your_password_is_wrong": "Mật khẩu của bạn sai!",
+  "Your_push_was_sent_to_s_devices": "Đã được gửi tới % thiết bị"
+}
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
