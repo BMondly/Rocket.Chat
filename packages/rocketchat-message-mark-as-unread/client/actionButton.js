@@ -16,7 +16,7 @@ Meteor.startup(() => {
 				if (subscription == null) {
 					return;
 				}
-				RoomManager.close(subscription.t + subscription.name);
+				RoomManager.close(subscription.t + subscription.team + '/' + subscription.name);
 				return FlowRouter.go('home');
 			});
 		},

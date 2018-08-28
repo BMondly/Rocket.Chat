@@ -5,7 +5,7 @@ class ModelRooms extends RocketChat.models._Base {
 	constructor() {
 		super(...arguments);
 
-		this.tryEnsureIndex({ 'name': 1 }, { unique: 1, sparse: 1 });
+		this.tryEnsureIndex({ 'name': 1, team: 1 }, { unique: 1, sparse: 1 });
 		this.tryEnsureIndex({ 'default': 1 });
 		this.tryEnsureIndex({ 'usernames': 1 });
 		this.tryEnsureIndex({ 't': 1 });
@@ -34,8 +34,8 @@ class ModelRooms extends RocketChat.models._Base {
 		return this.findOne(query, options);
 	}
 
-	findOneByName(name, options) {
-		const query = {name};
+	findOneByName(name, team, options) {
+		const query = {name, team};
 
 		return this.findOne(query, options);
 	}
@@ -49,8 +49,8 @@ class ModelRooms extends RocketChat.models._Base {
 		return this.findOne(query);
 	}
 
-	findOneByDisplayName(fname, options) {
-		const query = {fname};
+	findOneByDisplayName(fname, team, options) {
+		const query = {fname, team};
 
 		return this.findOne(query, options);
 	}

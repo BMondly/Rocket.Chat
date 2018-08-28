@@ -9,6 +9,7 @@ export class AppRoomBridge {
 		console.log(`The App ${ appId } is creating a new room.`, room);
 
 		const rcRoom = this.orch.getConverters().get('rooms').convertAppRoom(room);
+		const params = [rcRoom.usernames];
 		let method;
 
 		switch (room.type) {
@@ -17,6 +18,8 @@ export class AppRoomBridge {
 				break;
 			case RoomType.PRIVATE_GROUP:
 				method = 'createPrivateGroup';
+				// params.push(team)
+				throw new Error('Team not set');
 				break;
 			default:
 				throw new Error('Only channels and private groups can be created.');
@@ -24,7 +27,7 @@ export class AppRoomBridge {
 
 		let rid;
 		Meteor.runAsUser(room.creator.id, () => {
-			const info = Meteor.call(method, rcRoom.usernames);
+			const info = Meteor.call(method, ...params);
 			rid = info.rid;
 		});
 

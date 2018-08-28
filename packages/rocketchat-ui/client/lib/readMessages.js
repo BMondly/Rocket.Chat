@@ -120,7 +120,7 @@ const readMessage = new class {
 			return;
 		}
 
-		const room = RoomManager.openedRooms[subscription.t + subscription.name];
+		const room = RoomManager.openedRooms[subscription.t + subscription.team + '/' + subscription.name];
 		if (room == null) {
 			return;
 		}

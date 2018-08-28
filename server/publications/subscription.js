@@ -30,7 +30,8 @@ const fields = {
 	disableNotifications: 1,
 	hideUnreadStatus: 1,
 	muteGroupMentions: 1,
-	ignored: 1
+	ignored: 1,
+	team: 1
 };
 
 Meteor.methods({

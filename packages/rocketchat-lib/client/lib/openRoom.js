@@ -3,7 +3,7 @@ import _ from 'underscore';
 
 currentTracker = undefined;
 
-function openRoom(type, name) {
+function openRoom(type, name, team) {
 	Session.set('openedRoom', null);
 
 	return Meteor.defer(() =>
@@ -14,7 +14,7 @@ function openRoom(type, name) {
 				return;
 			}
 
-			if (RoomManager.open(type + name).ready() !== true) {
+			if (RoomManager.open(type + team + '/' + name).ready() !== true) {
 				BlazeLayout.render('main', { modal: RocketChat.Layout.isEmbedded(), center: 'loading' });
 				return;
 			}
@@ -23,13 +23,13 @@ function openRoom(type, name) {
 			}
 			c.stop();
 
-			const room = RocketChat.roomTypes.findRoom(type, name, user);
+			const room = RocketChat.roomTypes.findRoom(type, team, name, user);
 			if (room == null) {
 				if (type === 'd') {
-					Meteor.call('createDirectMessage', name, function(err) {
+					Meteor.call('createDirectMessage', name, team, function(err) {
 						if (!err) {
-							RoomManager.close(type + name);
-							return openRoom('d', name);
+							RoomManager.close(type + team + '/' + name);
+							return openRoom('d', name, team);
 						} else {
 							Session.set('roomNotFound', {type, name});
 							BlazeLayout.render('main', {center: 'roomNotFound'});
@@ -44,8 +44,8 @@ function openRoom(type, name) {
 						} else {
 							delete record.$loki;
 							RocketChat.models.Rooms.upsert({ _id: record._id }, _.omit(record, '_id'));
-							RoomManager.close(type + name);
-							return openRoom(type, name);
+							RoomManager.close(type + team + '/' + name);
+							return openRoom(type, name, team);
 						}
 					});
 				}
@@ -57,7 +57,7 @@ function openRoom(type, name) {
 				for (const child of Array.from(mainNode.children)) {
 					if (child) { mainNode.removeChild(child); }
 				}
-				const roomDom = RoomManager.getDomOfRoom(type + name, room._id);
+				const roomDom = RoomManager.getDomOfRoom(type + team + '/' + name, room._id);
 				mainNode.appendChild(roomDom);
 				if (roomDom.classList.contains('room-container')) {
 					roomDom.querySelector('.messages-box > .wrapper').scrollTop = roomDom.oldScrollTop;
@@ -70,7 +70,7 @@ function openRoom(type, name) {
 			fireGlobalEvent('room-opened', _.omit(room, 'usernames'));
 
 			Session.set('editRoomTitle', false);
-			RoomManager.updateMentionsMarksOfRoom(type + name);
+			RoomManager.updateMentionsMarksOfRoom(type + team + '/' + name);
 			Meteor.setTimeout(() => readMessage.readNow(), 2000);
 			// KonchatNotification.removeRoomNotification(params._id)
 			// update user's room subscription

@@ -15,7 +15,7 @@ function findChannelByIdOrName({ params, checkedArchived = true, returnUsernames
 	if (params.roomId) {
 		room = RocketChat.models.Rooms.findOneById(params.roomId, { fields });
 	} else if (params.roomName) {
-		room = RocketChat.models.Rooms.findOneByName(params.roomName, { fields });
+		room = RocketChat.models.Rooms.findOneByName(params.roomName, params.team, { fields });
 	}
 
 	if (!room || room.t !== 'c') {

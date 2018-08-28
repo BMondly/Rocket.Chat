@@ -183,10 +183,12 @@ export const RoomHistoryManager = new class {
 			const subscription = ChatSubscription.findOne({rid: message.rid});
 			if (subscription) {
 				// const { ls } = subscription;
-				typeName = subscription.t + subscription.name;
+				typeName = subscription.t + subscription.team + '/' + subscription.name;
 			} else {
 				const curRoomDoc = ChatRoom.findOne({_id: message.rid});
-				typeName = (curRoomDoc != null ? curRoomDoc.t : undefined) + (curRoomDoc != null ? curRoomDoc.name : undefined);
+				if (curRoomDoc) {
+					typeName = curRoomDoc.t + curRoomDoc.team + '/' + curRoomDoc.name;
+				}
 			}
 
 			return Meteor.call('loadSurroundingMessages', message, limit, function(err, result) {

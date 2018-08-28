@@ -8,7 +8,8 @@ function findDirectMessageRoom(params, user) {
 	const room = RocketChat.getRoomByNameOrIdWithOptionToJoin({
 		currentUserId: user._id,
 		nameOrId: params.username || params.roomId,
-		type: 'd'
+		type: 'd',
+		team: params.team
 	});
 
 	if (!room || room.t !== 'd') {

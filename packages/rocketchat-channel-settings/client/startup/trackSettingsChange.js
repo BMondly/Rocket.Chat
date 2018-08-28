@@ -4,11 +4,11 @@ Meteor.startup(function() {
 			if (msg.t === 'room_changed_privacy') {
 				if (Session.get('openedRoom') === msg.rid) {
 					const type = FlowRouter.current().route.name === 'channel' ? 'c' : 'p';
-					RoomManager.close(type + FlowRouter.getParam('name'));
+					RoomManager.close(type + FlowRouter.getParam('team') + '/' + FlowRouter.getParam('name'));
 
 					const subscription = ChatSubscription.findOne({ rid: msg.rid });
 					const route = subscription.t === 'c' ? 'channel' : 'group';
-					FlowRouter.go(route, { name: subscription.name }, FlowRouter.current().queryParams);
+					FlowRouter.go(route, { name: subscription.name, team: subscription.team }, FlowRouter.current().queryParams);
 				}
 			}
 		});
@@ -24,7 +24,7 @@ Meteor.startup(function() {
 				if (Session.get('openedRoom') === msg.rid) {
 					const room = ChatRoom.findOne(msg.rid);
 					if (room.name !== FlowRouter.getParam('name')) {
-						RoomManager.close(room.t + FlowRouter.getParam('name'));
+						RoomManager.close(room.t + FlowRouter.getParam('team') + '/' + FlowRouter.getParam('name'));
 						RocketChat.roomTypes.openRouteLink(room.t, room, FlowRouter.current().queryParams);
 					}
 				}

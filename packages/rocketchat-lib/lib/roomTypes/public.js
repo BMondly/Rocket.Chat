@@ -5,12 +5,12 @@ export class PublicRoomRoute extends RoomTypeRouteConfig {
 	constructor() {
 		super({
 			name: 'channel',
-			path: '/channel/:name'
+			path: '/:team/channel/:name'
 		});
 	}
 
 	action(params) {
-		return openRoom('c', params.name);
+		return openRoom('c', params.name, params.team);
 	}
 }
 
@@ -25,10 +25,11 @@ export class PublicRoomType extends RoomTypeConfig {
 		});
 	}
 
-	findRoom(identifier) {
+	findRoom(identifier, team) {
 		const query = {
 			t: 'c',
-			name: identifier
+			name: identifier,
+			team
 		};
 		return ChatRoom.findOne(query);
 	}

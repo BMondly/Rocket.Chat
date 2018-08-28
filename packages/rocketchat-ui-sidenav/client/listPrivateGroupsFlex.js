@@ -66,12 +66,18 @@ Template.listPrivateGroupsFlex.onCreated(function() {
 			}
 		}
 
-		this.groups.set(RocketChat.models.Subscriptions.find({
+		const query = {
 			name: new RegExp(s.trim(s.escapeRegExp(this.nameFilter.get())), 'i'),
 			t: 'p',
 			archived: { $ne: true }
-		}, options).fetch()
-		);
+		};
+		const team = FlowRouter.getParam('team');
+
+		if(team) {
+			query.team = team;
+		}
+
+		this.groups.set(RocketChat.models.Subscriptions.find(query, options).fetch());
 		if (this.groups.get().length < this.limit.get()) {
 			return this.hasMore.set(false);
 		}
