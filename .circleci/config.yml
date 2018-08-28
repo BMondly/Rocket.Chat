@@ -257,6 +257,7 @@ jobs:
             bash .circleci/update-releases.sh
             bash .circleci/snap.sh
             bash .circleci/redhat-registry.sh
+<<<<<<< HEAD
 
   image-build:
     <<: *defaults
@@ -366,6 +367,8 @@ jobs:
             cp ~/repo/.docker-mongo/entrypoint.sh .
             docker build -t rocketchat/rocket.chat.preview:pr-$CIRCLE_PR_NUMBER .
             docker push rocketchat/rocket.chat.preview:pr-$CIRCLE_PR_NUMBER
+=======
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
 
 workflows:
   version: 2

@@ -1,6 +1,10 @@
 FROM rocketchat/base:8
 
+<<<<<<< HEAD
 ADD . /app
+=======
+ENV RC_VERSION 0.64.0-develop
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
 
 MAINTAINER buildmaster@rocket.chat
 

@@ -17,7 +17,11 @@ elif [[ $TRAVIS_TAG ]]; then
     RC_VERSION=$TRAVIS_TAG
 else
     CHANNEL=edge
+<<<<<<< HEAD
     RC_VERSION=0.66.0
+=======
+    RC_VERSION=0.64.0-develop
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
 fi
 
 echo "Preparing to trigger a snap release for $CHANNEL channel"

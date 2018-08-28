@@ -1,7 +1,11 @@
 {
 	"name": "Rocket.Chat",
 	"description": "The Ultimate Open Source WebChat Platform",
+<<<<<<< HEAD
 	"version": "0.66.0",
+=======
+	"version": "0.64.0-develop",
+>>>>>>> 58c4e0a2d... Merge branch 'develop' into feature/teams
 	"author": {
 		"name": "Rocket.Chat",
 		"url": "https://rocket.chat/"
