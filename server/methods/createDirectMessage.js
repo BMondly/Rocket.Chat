@@ -1,6 +1,9 @@
 Meteor.methods({
-	createDirectMessage(username) {
+	createDirectMessage(username, team) {
 		check(username, String);
+		check(team, String);
+
+		// TODO add security to only send team based private messages when both users are on the provided team
 
 		if (!Meteor.userId()) {
 			throw new Meteor.Error('error-invalid-user', 'Invalid user', {
@@ -36,7 +39,7 @@ Meteor.methods({
 			});
 		}
 
-		const rid = [me._id, to._id].sort().join('');
+		const rid = [me._id, to._id].sort().join('') + '_' + team;
 
 		const now = new Date();
 
@@ -50,7 +53,8 @@ Meteor.methods({
 			$setOnInsert: {
 				t: 'd',
 				msgs: 0,
-				ts: now
+				ts: now,
+				team
 			}
 		});
 
@@ -75,7 +79,8 @@ Meteor.methods({
 					_id: me._id,
 					username: me.username
 				},
-				...myNotificationPref
+				...myNotificationPref,
+				team
 			}
 		};
 
@@ -107,7 +112,8 @@ Meteor.methods({
 					_id: to._id,
 					username: to.username
 				},
-				...toNotificationPref
+				...toNotificationPref,
+				team
 			}
 		});
 

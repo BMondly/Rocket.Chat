@@ -2,13 +2,13 @@ import _ from 'underscore';
 
 Meteor.startup(function() {
 	Meteor.defer(() => RocketChat.models._CacheControl.withValue(false, function() {
-		if (!RocketChat.models.Rooms.findOneById('GENERAL')) {
+		if (process.env.GENERAL_CHANNEL && !RocketChat.models.Rooms.findOneById('GENERAL')) {
 			RocketChat.models.Rooms.createWithIdTypeAndName('GENERAL', 'c', 'general', {
 				'default': true
 			});
 		}
 
-		if (!RocketChat.models.Users.findOneById('rocket.cat')) {
+		if (process.env.ROCKET_CAT && !RocketChat.models.Users.db.findOneById('rocket.cat')) {
 			RocketChat.models.Users.create({
 				_id: 'rocket.cat',
 				name: 'Rocket.Cat',
