@@ -44,7 +44,7 @@ class ModelSubscriptions extends RocketChat.models._Base {
 
 	findOneByRoomNameAndUserId(team, roomName, userId) {
 		if (this.useCache) {
-			return this.cache.findByIndex('name,team,u._id', [team, roomName, userId]).fetch();
+			return this.cache.findByIndex('name,team,u._id', [roomName, team, userId]).fetch();
 		}
 		const query = {
 			name: roomName,
