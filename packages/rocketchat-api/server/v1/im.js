@@ -7,6 +7,7 @@ function findDirectMessageRoom(params, user) {
 		currentUserId: user._id,
 		nameOrId: params.username || params.roomId,
 		type: 'd',
+		team: params.team,
 	});
 
 	if (!room || room.t !== 'd') {

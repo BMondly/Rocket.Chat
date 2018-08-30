@@ -10,7 +10,7 @@ RocketChat.saveRoomName = function(rid, displayName, user, sendMessage = true) {
 		return;
 	}
 
-	const slugifiedRoomName = RocketChat.getValidRoomName(displayName, rid);
+	const slugifiedRoomName = RocketChat.getValidRoomName(displayName, team, rid);
 
 	const update = RocketChat.models.Rooms.setNameById(rid, slugifiedRoomName, displayName) && RocketChat.models.Subscriptions.updateNameAndAlertByRoomId(rid, slugifiedRoomName, displayName);
 

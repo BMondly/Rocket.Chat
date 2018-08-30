@@ -9,8 +9,9 @@ function findPrivateGroupByIdOrName({ params, userId, checkedArchived = true }) 
 	let roomSub;
 	if (params.roomId) {
 		roomSub = RocketChat.models.Subscriptions.findOneByRoomIdAndUserId(params.roomId, userId);
-	} else if (params.roomName) {
-		roomSub = RocketChat.models.Subscriptions.findOneByRoomNameAndUserId(params.roomName, userId);
+	} else if (params.roomName && params.team) {
+        // Add team
+		roomSub = RocketChat.models.Subscriptions.findOneByRoomNameAndUserId(params.team, params.roomName, userId);
 	}
 
 	if (!roomSub || roomSub.t !== 'p') {
@@ -186,6 +187,10 @@ RocketChat.API.v1.addRoute('groups.create', { authRequired: true }, {
 			return RocketChat.API.v1.failure('Body param "name" is required');
 		}
 
+		if (!this.bodyParams.team) {
+			return RocketChat.API.v1.failure('Body param "team" is required');
+		}
+
 		if (this.bodyParams.members && !_.isArray(this.bodyParams.members)) {
 			return RocketChat.API.v1.failure('Body param "members" must be an array if provided');
 		}
@@ -197,8 +202,9 @@ RocketChat.API.v1.addRoute('groups.create', { authRequired: true }, {
 		const readOnly = typeof this.bodyParams.readOnly !== 'undefined' ? this.bodyParams.readOnly : false;
 
 		let id;
+		const { name, team, members, customFields } = this.bodyParams;
 		Meteor.runAsUser(this.userId, () => {
-			id = Meteor.call('createPrivateGroup', this.bodyParams.name, this.bodyParams.members ? this.bodyParams.members : [], readOnly, this.bodyParams.customFields);
+			id = Meteor.call('createPrivateGroup', name, members || [], readOnly, customFields, { team });
 		});
 
 		return RocketChat.API.v1.success({

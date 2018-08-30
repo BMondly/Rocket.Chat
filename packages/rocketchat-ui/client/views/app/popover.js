@@ -230,7 +230,7 @@ Template.popover.events({
 				if (subscription == null) {
 					return;
 				}
-				RoomManager.close(subscription.t + subscription.name);
+				RoomManager.close(subscription.t + subscription.team + '/' + subscription.name);
 
 				FlowRouter.go('home');
 			});

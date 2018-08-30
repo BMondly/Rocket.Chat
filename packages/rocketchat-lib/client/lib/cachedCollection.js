@@ -338,7 +338,7 @@ class CachedCollection {
 			RocketChat.callbacks.run(`cachedCollection-received-${ this.name }`, record, t);
 			if (t === 'removed') {
 				this.collection.remove(record._id);
-				RoomManager.close(record.t + record.name);
+				RoomManager.close(record.t + record.team + '/' + record.name);
 			} else {
 				this.collection.upsert({ _id: record._id }, _.omit(record, '_id'));
 			}

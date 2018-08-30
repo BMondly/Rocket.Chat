@@ -32,9 +32,12 @@ const RoomManager = new function() {
 					const user = Meteor.user();
 
 					const type = typeName.substr(0, 1);
-					const name = typeName.substr(1);
+					const team = typeName.substr(1).split('/')[0];
+					const name = typeName.substr(1).split('/')[1];
 
-					const room = Tracker.nonreactive(() => RocketChat.roomTypes.findRoom(type, name, user));
+					const room = Tracker.nonreactive(() => {
+						return RocketChat.roomTypes.findRoom(type, team, name, user);
+					});
 
 					if (room != null) {
 						openedRooms[typeName].rid = room._id;

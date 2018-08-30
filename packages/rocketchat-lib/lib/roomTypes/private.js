@@ -5,12 +5,12 @@ export class PrivateRoomRoute extends RoomTypeRouteConfig {
 	constructor() {
 		super({
 			name: 'group',
-			path: '/group/:name',
+			path: '/:team/group/:name'
 		});
 	}
 
 	action(params) {
-		return openRoom('p', params.name);
+		return openRoom('p', params.name, params.team);
 	}
 }
 
@@ -25,10 +25,11 @@ export class PrivateRoomType extends RoomTypeConfig {
 		});
 	}
 
-	findRoom(identifier) {
+	findRoom(identifier, team) {
 		const query = {
 			t: 'p',
 			name: identifier,
+			team,
 		};
 
 		return ChatRoom.findOne(query);
