@@ -45,7 +45,7 @@ Meteor.methods({
 			});
 		}
 
-		const rid = [me._id, to._id].sort().join('') + '_' + team;
+		const rid = `${ [me._id, to._id].sort().join('') }_${ team }`;
 
 		const now = new Date();
 
@@ -62,8 +62,9 @@ Meteor.methods({
 				ts: now,
 				usersCount: 2,
 				team,
-			}
-		} );
+				name: [me._id, to._id].sort().join(''),
+			},
+		});
 
 		const myNotificationPref = RocketChat.getDefaultSubscriptionPref(me);
 
