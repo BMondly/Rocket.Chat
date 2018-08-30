@@ -21,11 +21,25 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		this.tryEnsureIndex({ autoTranslate: 1 }, { sparse: 1 });
 		this.tryEnsureIndex({ autoTranslateLanguage: 1 }, { sparse: 1 });
 		this.tryEnsureIndex({ 'userHighlights.0': 1 }, { sparse: 1 });
+		this.tryEnsureIndex({ team: 1 }, { sparse: 1 });
 	}
 
+	// James Craig - Aug 30 2018 Merge Changes - RC-dev deleted this row for a bug fix
+	// and this index will be a performance hit at scale.
+	// -  this.tryEnsureIndex({ 'u._id': 1, 'name': 1, 't': 1, 'code': 1, 'team': 1 }, { unique: 1 });
+	// Replaced with this row.  Check uniqueness team creation runtime.
+	// +  this.tryEnsureIndex({ team: 1 }, { sparse: 1 });
+
+	// James Craig - Aug 30 2018 Merge Changes - Allowed removal of cache index
+	// Timed with a major MondoDB upgrade RC-dev branched removed all this.cache.ensureIndex()
+	// I allowed removal of this row.
+	// - this.cache.ensureIndex(['name', 'team', 'u._id'], 'unique');
 
 	// FIND ONE
 	findOneByRoomIdAndUserId(roomId, userId, options) {
+		if (this.useCache) {
+			return this.cache.findByIndex('rid,u._id', [roomId, userId], options).fetch();
+		}
 		const query = {
 			rid: roomId,
 			'u._id': userId,
@@ -34,18 +48,13 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.findOne(query, options);
 	}
 
-	findOneByRoomIdAndUsername(roomId, username, options) {
-		const query = {
-			rid: roomId,
-			'u.username': username,
-		};
-
-		return this.findOne(query, options);
-	}
-
-	findOneByRoomNameAndUserId(roomName, userId) {
+	findOneByRoomNameAndUserId(team, roomName, userId) {
+		if (this.useCache) {
+			return this.cache.findByIndex('name,team,u._id', [roomName, team, userId]).fetch();
+		}
 		const query = {
 			name: roomName,
+			team,
 			'u._id': userId,
 		};
 
@@ -54,28 +63,12 @@ class ModelSubscriptions extends RocketChat.models._Base {
 
 	// FIND
 	findByUserId(userId, options) {
+		if (this.useCache) {
+			return this.cache.findByIndex('u._id', userId, options);
+		}
+
 		const query =
 			{ 'u._id': userId };
-
-		return this.find(query, options);
-	}
-
-	findByUserIdAndType(userId, type, options) {
-		const query = {
-			'u._id': userId,
-			t: type,
-		};
-
-		return this.find(query, options);
-	}
-
-	findByUserIdAndTypes(userId, types, options) {
-		const query = {
-			'u._id': userId,
-			t: {
-				$in: types,
-			},
-		};
 
 		return this.find(query, options);
 	}
@@ -91,6 +84,7 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.find(query, options);
 	}
 
+	// FIND
 	findByRoomIdAndRoles(roomId, roles, options) {
 		roles = [].concat(roles);
 		const query = {
@@ -120,7 +114,21 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.find(query, options);
 	}
 
+	findByTypeNameAndUserId(type, name, userId, options) {
+		const query = {
+			t: type,
+			name,
+			'u._id': userId,
+		};
+
+		return this.find(query, options);
+	}
+
 	findByRoomId(roomId, options) {
+		if (this.useCache) {
+			return this.cache.findByIndex('rid', roomId, options);
+		}
+
 		const query =
 			{ rid: roomId };
 
@@ -133,15 +141,6 @@ class ModelSubscriptions extends RocketChat.models._Base {
 			'u._id': {
 				$ne: userId,
 			},
-		};
-
-		return this.find(query, options);
-	}
-
-	findByRoomWithUserHighlights(roomId, options) {
-		const query = {
-			rid: roomId,
-			'userHighlights.0': { $exists: true },
 		};
 
 		return this.find(query, options);
@@ -179,18 +178,6 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		};
 
 		return this.find(query);
-	}
-
-	findByRoomIdWhenUserIdExists(rid, options) {
-		const query = { rid, 'u._id': { $exists: 1 } };
-
-		return this.find(query, options);
-	}
-
-	findByRoomIdWhenUsernameExists(rid, options) {
-		const query = { rid, 'u.username': { $exists: 1 } };
-
-		return this.find(query, options);
 	}
 
 	findUnreadByUserId(userId) {
@@ -317,11 +304,16 @@ class ModelSubscriptions extends RocketChat.models._Base {
 	}
 
 	setCustomFieldsDirectMessagesByUserId(userId, fields) {
+		const values = {};
+		Object.keys(fields).forEach((key) => {
+			values[`customFields.${ key }`] = fields[key];
+		});
+
 		const query = {
 			'u._id': userId,
 			t: 'd',
 		};
-		const update = { $set: { customFields: fields } };
+		const update = { $set: values };
 		const options = { multi: true };
 
 		return this.update(query, update, options);
@@ -360,13 +352,13 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.update(query, update, { multi: true });
 	}
 
-	updateDisplayNameByRoomId(roomId, fname) {
+	updateNameByRoomId(roomId, name) {
 		const query =
 			{ rid: roomId };
 
 		const update = {
 			$set: {
-				fname,
+				name,
 			},
 		};
 
@@ -469,49 +461,21 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.update(query, update, { multi: true });
 	}
 
-	ignoreUser({ _id, ignoredUser : ignored, ignore = true }) {
-		const query = {
-			_id,
-		};
-		const update = {
-		};
-		if (ignore) {
-			update.$addToSet = { ignored };
-		} else {
-			update.$pull = { ignored };
-		}
-
-		return this.update(query, update);
-	}
-
 	setAlertForRoomIdExcludingUserId(roomId, userId) {
 		const query = {
 			rid: roomId,
 			'u._id': {
 				$ne: userId,
 			},
-			alert: { $ne: true },
+			$or: [
+				{ alert: { $ne: true } },
+				{ open: { $ne: true } },
+			],
 		};
 
 		const update = {
 			$set: {
 				alert: true,
-			},
-		};
-		return this.update(query, update, { multi: true });
-	}
-
-	setOpenForRoomIdExcludingUserId(roomId, userId) {
-		const query = {
-			rid: roomId,
-			'u._id': {
-				$ne: userId,
-			},
-			open: { $ne: true },
-		};
-
-		const update = {
-			$set: {
 				open: true,
 			},
 		};
@@ -570,18 +534,6 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.update(query, update) && this.update(query2, update2);
 	}
 
-	updateCustomFieldsByRoomId(rid, cfields) {
-		const query = { rid };
-		const customFields = cfields || {};
-		const update = {
-			$set: {
-				customFields,
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
 	updateTypeByRoomId(roomId, type) {
 		const query =
 			{ rid: roomId };
@@ -636,137 +588,6 @@ class ModelSubscriptions extends RocketChat.models._Base {
 		return this.update(query, update, { multi: true });
 	}
 
-	clearDesktopNotificationUserPreferences(userId) {
-		const query = {
-			'u._id': userId,
-			desktopPrefOrigin: 'user',
-		};
-
-		const update = {
-			$unset: {
-				desktopNotifications: 1,
-				desktopPrefOrigin: 1,
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	updateDesktopNotificationUserPreferences(userId, desktopNotifications) {
-		const query = {
-			'u._id': userId,
-			desktopPrefOrigin: {
-				$ne: 'subscription',
-			},
-		};
-
-		const update = {
-			$set: {
-				desktopNotifications,
-				desktopPrefOrigin: 'user',
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	clearMobileNotificationUserPreferences(userId) {
-		const query = {
-			'u._id': userId,
-			mobilePrefOrigin: 'user',
-		};
-
-		const update = {
-			$unset: {
-				mobilePushNotifications: 1,
-				mobilePrefOrigin: 1,
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	updateMobileNotificationUserPreferences(userId, mobilePushNotifications) {
-		const query = {
-			'u._id': userId,
-			mobilePrefOrigin: {
-				$ne: 'subscription',
-			},
-		};
-
-		const update = {
-			$set: {
-				mobilePushNotifications,
-				mobilePrefOrigin: 'user',
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	clearEmailNotificationUserPreferences(userId) {
-		const query = {
-			'u._id': userId,
-			emailPrefOrigin: 'user',
-		};
-
-		const update = {
-			$unset: {
-				emailNotifications: 1,
-				emailPrefOrigin: 1,
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	updateEmailNotificationUserPreferences(userId, emailNotifications) {
-		const query = {
-			'u._id': userId,
-			emailPrefOrigin: {
-				$ne: 'subscription',
-			},
-		};
-
-		const update = {
-			$set: {
-				emailNotifications,
-				emailPrefOrigin: 'user',
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	updateUserHighlights(userId, userHighlights) {
-		const query = {
-			'u._id': userId,
-		};
-
-		const update = {
-			$set: {
-				userHighlights,
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
-	updateDirectFNameByName(name, fname) {
-		const query = {
-			t: 'd',
-			name,
-		};
-
-		const update = {
-			$set: {
-				fname,
-			},
-		};
-
-		return this.update(query, update, { multi: true });
-	}
-
 	// INSERT
 	createWithRoomAndUser(room, user, extraData) {
 		const subscription = {
@@ -786,47 +607,28 @@ class ModelSubscriptions extends RocketChat.models._Base {
 				username: user.username,
 				name: user.name,
 			},
-			...RocketChat.getDefaultSubscriptionPref(user),
-			...extraData,
+			team: room.team,
 		};
 
-		const result = this.insert(subscription);
+		_.extend(subscription, extraData);
 
-		RocketChat.models.Rooms.incUsersCountById(room._id);
-
-		return result;
+		return this.insert(subscription);
 	}
 
 
 	// REMOVE
 	removeByUserId(userId) {
-		const query = {
-			'u._id': userId,
-		};
+		const query =
+			{ 'u._id': userId };
 
-		const roomIds = this.findByUserId(userId).map((s) => s.rid);
-
-		const result = this.remove(query);
-
-		if (Match.test(result, Number) && result > 0) {
-			RocketChat.models.Rooms.incUsersCountByIds(roomIds, -1);
-		}
-
-		return result;
+		return this.remove(query);
 	}
 
 	removeByRoomId(roomId) {
-		const query = {
-			rid: roomId,
-		};
+		const query =
+			{ rid: roomId };
 
-		const result = this.remove(query);
-
-		if (Match.test(result, Number) && result > 0) {
-			RocketChat.models.Rooms.incUsersCountById(roomId, - result);
-		}
-
-		return result;
+		return this.remove(query);
 	}
 
 	removeByRoomIdAndUserId(roomId, userId) {
@@ -835,13 +637,7 @@ class ModelSubscriptions extends RocketChat.models._Base {
 			'u._id': userId,
 		};
 
-		const result = this.remove(query);
-
-		if (Match.test(result, Number) && result > 0) {
-			RocketChat.models.Rooms.incUsersCountById(roomId, - result);
-		}
-
-		return result;
+		return this.remove(query);
 	}
 }
 
