@@ -31,7 +31,7 @@ GitHub.Tests.Integration/Resources/*  binary
 *.pdb    binary
 *.sdf    binary
 *.7z     binary
-*.svg     binary
+*.svg    text
 
 
 # Auto detect text files and perform LF normalization
