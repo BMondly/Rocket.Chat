@@ -61,6 +61,7 @@ Meteor.methods({
 				t: 'd',
 				msgs: 0,
 				ts: now,
+				name: [me._id, to._id].sort().join(''),
 				team,
 				usersCount: 2,
 			},
