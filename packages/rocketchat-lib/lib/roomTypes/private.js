@@ -1,11 +1,11 @@
 /* globals openRoom */
-import {RoomSettingsEnum, RoomTypeConfig, RoomTypeRouteConfig, UiTextContext} from '../RoomTypeConfig';
+import { RoomSettingsEnum, RoomTypeConfig, RoomTypeRouteConfig, UiTextContext } from '../RoomTypeConfig';
 
 export class PrivateRoomRoute extends RoomTypeRouteConfig {
 	constructor() {
 		super({
 			name: 'group',
-			path: '/:team/group/:name'
+			path: '/:team/group/:name',
 		});
 	}
 
@@ -21,7 +21,7 @@ export class PrivateRoomType extends RoomTypeConfig {
 			order: 40,
 			icon: 'lock',
 			label: 'Private_Groups',
-			route: new PrivateRoomRoute()
+			route: new PrivateRoomRoute(),
 		});
 	}
 
@@ -29,7 +29,7 @@ export class PrivateRoomType extends RoomTypeConfig {
 		const query = {
 			t: 'p',
 			name: identifier,
-			team
+			team,
 		};
 
 		return ChatRoom.findOne(query);
@@ -44,9 +44,8 @@ export class PrivateRoomType extends RoomTypeConfig {
 	}
 
 	condition() {
-		const user = Meteor.user();
-		const mergeChannels = RocketChat.getUserPreference(user, 'mergeChannels');
-		return !mergeChannels && RocketChat.authz.hasAllPermission('view-p-room');
+		const groupByType = RocketChat.getUserPreference(Meteor.userId(), 'sidebarGroupByType');
+		return groupByType && RocketChat.authz.hasAllPermission('view-p-room');
 	}
 
 	isGroupChat() {
@@ -61,6 +60,13 @@ export class PrivateRoomType extends RoomTypeConfig {
 		switch (setting) {
 			case RoomSettingsEnum.JOIN_CODE:
 				return false;
+			case RoomSettingsEnum.BROADCAST:
+				return room.broadcast;
+			case RoomSettingsEnum.READ_ONLY:
+				return !room.broadcast;
+			case RoomSettingsEnum.REACT_WHEN_READ_ONLY:
+				return !room.broadcast && room.ro;
+			case RoomSettingsEnum.SYSTEM_MESSAGES:
 			default:
 				return true;
 		}
