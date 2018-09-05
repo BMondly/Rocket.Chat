@@ -16,7 +16,8 @@ Meteor.startup(() => {
 				if (subscription == null) {
 					return;
 				}
-				RoomManager.close(subscription.t + subscription.name);
+				// ttrc TODO ESlint complaint
+				RoomManager.close(subscription.t + subscription.team + '/' + subscription.name);
 				return FlowRouter.go('home');
 			});
 		},

@@ -26,8 +26,8 @@ RocketChat.roomTypes = new class RocketChatRoomTypes extends RoomTypesCommon {
 	getUserStatus(roomType, roomId) {
 		return this.roomTypes[roomType] && typeof this.roomTypes[roomType].getUserStatus === 'function' && this.roomTypes[roomType].getUserStatus(roomId);
 	}
-	findRoom(roomType, identifier, user) {
-		return this.roomTypes[roomType] && this.roomTypes[roomType].findRoom(identifier, user);
+	findRoom(roomType, team, identifier, user) {
+		return this.roomTypes[roomType] && this.roomTypes[roomType].findRoom(identifier, team, user);
 	}
 	canSendMessage(roomId) {
 		return ChatSubscription.find({

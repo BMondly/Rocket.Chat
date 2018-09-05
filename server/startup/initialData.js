@@ -1,14 +1,23 @@
 import _ from 'underscore';
 
 Meteor.startup(function() {
+<<<<<<< HEAD
 	Meteor.defer(() => {
 		if (!RocketChat.models.Rooms.findOneById('GENERAL')) {
+=======
+	Meteor.defer(function() {
+		if (process.env.GENERAL_CHANNEL && !RocketChat.models.Rooms.findOneById('GENERAL')) {
+>>>>>>> 7a0e697... Add basic support for teams
 			RocketChat.models.Rooms.createWithIdTypeAndName('GENERAL', 'c', 'general', {
 				default: true,
 			});
 		}
 
+<<<<<<< HEAD
 		if (!RocketChat.models.Users.findOneById('rocket.cat')) {
+=======
+		if (process.env.ROCKET_CAT && !RocketChat.models.Users.db.findOneById('rocket.cat')) {
+>>>>>>> 7a0e697... Add basic support for teams
 			RocketChat.models.Users.create({
 				_id: 'rocket.cat',
 				name: 'Rocket.Cat',

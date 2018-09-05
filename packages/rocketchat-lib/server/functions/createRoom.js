@@ -15,7 +15,10 @@ RocketChat.createRoom = function(type, name, owner, members, readOnly, extraData
 	if (!owner) {
 		throw new Meteor.Error('error-invalid-user', 'Invalid user', { function: 'RocketChat.createRoom' });
 	}
+	// ttrc TODO ESlint complaint
+	const slugifiedRoomName = RocketChat.getValidRoomName(name, extraData.team);
 
+	const now = new Date();
 	if (!_.contains(members, owner.username)) {
 		members.push(owner.username);
 	}
@@ -24,7 +27,7 @@ RocketChat.createRoom = function(type, name, owner, members, readOnly, extraData
 		readOnly = true;
 		delete extraData.reactWhenReadOnly;
 	}
-
+	// ttrc TODO ESlint complaint  - but not our code
 	const now = new Date();
 	let room = Object.assign({
 		name: RocketChat.getValidRoomName(name),

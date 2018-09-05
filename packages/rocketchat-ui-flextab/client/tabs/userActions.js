@@ -87,7 +87,7 @@ export const getActions = function({ user, directActions, hideAdminControls }) {
 			icon: 'message',
 			name: t('Conversation'),
 			action: prevent(getUser, ({ username }) =>
-				Meteor.call('createDirectMessage', username, success((result) => result.rid && FlowRouter.go('direct', { username }, FlowRouter.current().queryParams)))
+				Meteor.call('createDirectMessage', username, FlowRouter.getParam('team'), success((result) => result.rid && FlowRouter.go('direct', { username, team: FlowRouter.getParam('team') }, FlowRouter.current().queryParams)))
 			),
 			condition() {
 				return canDirectMessage(this.username);
