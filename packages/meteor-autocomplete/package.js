@@ -1,3 +1,4 @@
+/* Saved as CRLF in the repo */
 Package.describe({
 	name: 'mizzao:autocomplete',
 	summary: 'Client/server autocompletion designed for Meteor\'s collections and reactivity',

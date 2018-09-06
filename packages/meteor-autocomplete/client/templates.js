@@ -1,4 +1,5 @@
 /* globals AutoComplete */
+/* Saved as CRLF in the repo */
 import _ from 'underscore';
 
 //  Events on template instances, sent to the autocomplete class

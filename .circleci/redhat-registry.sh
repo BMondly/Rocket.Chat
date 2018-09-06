@@ -10,3 +10,6 @@ if [[ $CIRCLE_TAG ]]; then
   -H 'Content-Type: application/json' \
   -d '{"tag":"'$CIRCLE_TAG'"}'
 fi
+
+ /* Saved as CRLF in the repo */
+ 

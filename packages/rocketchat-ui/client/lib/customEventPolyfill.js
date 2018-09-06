@@ -10,3 +10,5 @@
 
   window.CustomEvent = CustomEvent;
 })();
+
+ /* Saved as CRLF in the repo */

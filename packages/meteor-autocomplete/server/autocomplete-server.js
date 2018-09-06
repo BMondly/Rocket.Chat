@@ -1,5 +1,6 @@
 // This also attaches an onStop callback to sub, so we don't need to worry about that.
 // https://github.com/meteor/meteor/blob/devel/packages/mongo/collection.js
+/* Saved as CRLF in the repo */
 const Autocomplete = class {
 	publishCursor(cursor, sub) {
 		Mongo.Collection._publishCursor(cursor, sub, 'autocompleteRecords');

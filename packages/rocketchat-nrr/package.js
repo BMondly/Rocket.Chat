@@ -10,3 +10,5 @@ Package.onUse(function(api) {
 
 	api.mainModule('nrr.js');
 });
+
+/* Saved as CRLF in the repo */

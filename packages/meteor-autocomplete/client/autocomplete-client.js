@@ -1,4 +1,5 @@
 /* globals Deps, getCaretCoordinates*/
+/* Saved as CRLF in the repo */
 import _ from 'underscore';
 import AutoCompleteRecords from './collection';
 

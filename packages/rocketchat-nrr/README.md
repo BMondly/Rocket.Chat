@@ -16,3 +16,4 @@ or
 ```handlebars
 {{#nrr nrrargs 'message' message}}{{/nrr}}
 ```
+/* Saved as CRLF in the repo */

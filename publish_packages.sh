@@ -9,3 +9,5 @@ for d in packages/* ; do
   meteor publish
   cd ../../
 done
+
+// Saved as CRLF in the repo
