@@ -17,6 +17,7 @@
 *.php  text eol=lf
 *.svg  text eol=lf
 *.yml  text eol=lf
+*.hbs  text eol=lf
 
 # Exclude the following files when exporting an archive.
 # http://git-scm.com/docs/gitattributes#_creating_an_archive
