@@ -1,0 +1,120 @@
+# The gitattributes file is a simple text file that gives
+# attributes to pathnames.
+# http://git-scm.com/docs/gitattributes
+
+# Automatically normalize line endings for all text-based files.
+# http://git-scm.com/docs/gitattributes#_end_of_line_conversion
+* text=auto
+
+# For the following file types, normalize line endings to LF on check
+# in and prevent conversion to CRLF when they are checked out (this
+# is required in order to prevent newline related issues like, for
+# example, after the build script is run).
+.*     text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.php  text eol=lf
+*.svg  text eol=lf
+*.yml  text eol=lf
+*.hbs  text eol=lf
+
+# Exclude the following files when exporting an archive.
+# http://git-scm.com/docs/gitattributes#_creating_an_archive
+.editorconfig  export-ignore
+.gitattributes export-ignore
+.gitignore     export-ignore
+README.md      export-ignore
+
+# git won't try to convert this files
+*.pem -text
+*.der -text
+test/static/**/*.xml -text
+
+pgp-keyrin* text eol=lf
+pgp-signatur* text eol=lf
+*.pgp -text eol=lf
+
+# These files - maybe they have been saved in the repo as CRLF
+rocket.chat-128.svg text eol=lf
+rocket.chat-150.svg text eol=lf
+rocket.chat-24.svg text eol=lf
+.sandstorm/rocket.chat-128.svg text eol=lf
+.sandstorm/rocket.chat-150.svg text eol=lf
+.sandstorm/rocket.chat-24.svg text eol=lf
+packages/rocketchat-ui/client/lib/customEventPolyfill.js text eol=lf
+/.sandstorm/rocket.chat-128.svg text eol=lf
+/.sandstorm/rocket.chat-150.svg text eol=lf
+/.sandstorm/rocket.chat-24.svg text eol=lf
+/packages/rocketchat-ui/client/lib/customEventPolyfill.js text eol=lf
+
+
+# These file types can be environment centric
+*.msbuild text=auto
+*.bat text=auto
+*.log text=auto
+*.htm text=auto
+*.ini text=auto
+*.cnf text=auto
+*.inf text=auto
+
+# Text files that should be normalized to LF
+*.cs     text diff=csharp
+*.sln     text eol=crlf 
+*.csproj  text eol=crlf
+
+*.js text eol=lf
+*.json text eol=lf
+*.grpahql text eol=lf
+*.sql text eol=lf
+
+*.ami text eol=lf
+*.config text eol=lf
+*.info text eol=lf
+*.sh text eol=lf
+*.cmd text eol=lf
+*.ps1 text eol=crlf
+*.yml text eol=lf
+*.ci text eol=lf
+.circl* text eol=lf
+.docke* text eol=lf
+.dron*  text eol=lf
+
+.editorc* text eol=lf
+.eslint* text eol=lf
+.postcs* text eol=lf
+
+*.html text eol=lf
+*.markdown text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.less text eol=lf
+*.map text eol=lf
+*.coffee text eol=lf
+
+.meteor/packages text eol=lf
+.meteor/versions text eol=lf
+.meteor/release text eol=lf
+.meteor/platforms text eol=lf
+.meteor/.finished-upgraders text eol=lf
+
+Lib/*  binary
+GitHub.Tests.Integration/Resources/*  binary
+
+# Binary files that should not be normalized or diffed
+*.png    binary
+*.jpg    binary
+*.gif    binary
+
+*.pfx    binary
+*.snk    binary
+*.dll    binary
+*.exe    binary
+*.lib    binary
+*.exp    binary
+*.pdb    binary
+*.sdf    binary
+*.7z     binary
+*.svg    text eol=lf
+
+js/*/dist/*.js -diff
