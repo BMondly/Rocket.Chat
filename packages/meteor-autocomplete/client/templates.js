@@ -81,3 +81,5 @@ Template._autocompleteContainer.helpers({
 	},
 });
 export { acEvents, attributes, autocompleteHelpers };
+
+/* saved as CRLF in RC-develop GitHub Repo */

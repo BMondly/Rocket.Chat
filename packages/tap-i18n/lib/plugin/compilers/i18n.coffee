@@ -16,3 +16,5 @@ Plugin.registerSourceHandler "i18n", (compileStep) ->
 
   if file_name == "project-tap.i18n"
     compilers.project_tap_i18n(compileStep)
+
+// saved as CRLF in RC-develop GitHub Repo

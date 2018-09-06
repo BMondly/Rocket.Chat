@@ -32,3 +32,5 @@ GATEWAY_IP=$(ip route  | grep ^default  | cut -d ' ' -f 3)
 if nc -z "$GATEWAY_IP" 3142 ; then
     echo "Acquire::http::Proxy \"http://$GATEWAY_IP:3142\";" > /etc/apt/apt.conf.d/80httpproxy
 fi
+
+/* saved as CRLF in RC-develop GitHub Repo */

@@ -122,3 +122,5 @@ compilers.generic_compiler = (extension, helper) -> (compileStep) ->
     sourcePath: input_path,
     data: output,
     bare: false
+
+    // saved as CRLF in RC-develop GitHub Repo

@@ -13,3 +13,5 @@ else
 fi
 
 curl -H "Content-Type: application/json" --data "$CURL_DATA" -X POST "$CURL_URL"
+
+/* saved as CRLF in RC-develop GitHub Repo */

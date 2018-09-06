@@ -26,3 +26,5 @@ Package.onUse(function(api) {
 
 	api.export('Autocomplete', 'server');
 });
+
+/* saved as CRLF in RC-develop GitHub Repo */

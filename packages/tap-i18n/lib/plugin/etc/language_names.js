@@ -137,3 +137,4 @@ language_names = {
 	wa: ['Walloon', 'Walon'],
 	cy: ['Welsh', 'Cymraeg'],
 };
+// saved as CRLF in RC-develop GitHub Repo

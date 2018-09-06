@@ -83,3 +83,5 @@ _.extend TAPi18n.prototype,
 
   _onceEnabled: ->
     @_registerAllServerTranslators()
+
+    // saved as CRLF in RC-develop GitHub Repo

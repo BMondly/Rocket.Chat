@@ -25,3 +25,5 @@ fi
 # sharp needs execution stack removed - https://forum.snapcraft.io/t/snap-and-executable-stacks/1812
 ls -l npm/node_modules/sharp/vendor
 execstack --clear-execstack npm/node_modules/sharp/vendor/lib/librsvg-2.so*
+
+/* saved as CRLF in RC-develop GitHub Repo */

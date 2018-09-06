@@ -93,3 +93,5 @@ compilers.package_tap_i18n = (compileStep) ->
     bare: false
 
 Plugin.registerSourceHandler "package-tap.i18n", compilers.package_tap_i18n
+
+// saved as CRLF in RC-develop GitHub Repo

@@ -29,3 +29,5 @@ Meteor.publish('autocomplete-recordset', function(selector, options, collName) {
 	// Mark the subscription ready after the initial addition of documents.
 	this.ready();
 });
+
+/* saved as CRLF in RC-develop GitHub Repo */

@@ -64,3 +64,5 @@ su -c "tar xf '${METEOR_CACHE_TARGET}'" vagrant
 # Link into global PATH
 ln -s /home/vagrant/.meteor/meteor /usr/bin/meteor
 chown vagrant:vagrant /home/vagrant -R
+
+/* saved as CRLF in RC-develop GitHub Repo */

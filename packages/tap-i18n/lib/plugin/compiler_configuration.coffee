@@ -21,3 +21,5 @@ share.compiler_configuration =
       @tap_i18n_input_files = []
 
     @tap_i18n_input_files.push(input_file)
+
+// saved as CRLF in RC-develop GitHub Repo

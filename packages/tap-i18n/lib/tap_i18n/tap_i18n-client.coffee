@@ -196,3 +196,5 @@ _.extend TAPi18n.prototype,
     session_lang = Session.get @_loaded_lang_session_key
 
     if session_lang? then session_lang else @._fallback_language
+
+// saved as CRLF in RC-develop GitHub Repo

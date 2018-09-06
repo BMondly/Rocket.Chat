@@ -21,3 +21,5 @@ _.extend share.helpers,
 
     isDefaultProjectConfInserted: (compileStep) ->
       @.getCompileStepArchAndPackage(compileStep) in compiler_configuration.default_project_conf_inserted_for
+
+// saved as CRLF in RC-develop GitHub Repo

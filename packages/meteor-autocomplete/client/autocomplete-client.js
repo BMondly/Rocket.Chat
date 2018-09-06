@@ -452,3 +452,5 @@ this.AutoComplete = class {
 	}
 
 };
+
+/* saved as CRLF in RC-develop GitHub Repo */

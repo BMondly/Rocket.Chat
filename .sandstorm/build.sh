@@ -21,3 +21,5 @@ npm install --production
 # Copy our launcher script into the bundle so the grain can start up.
 mkdir -p /home/vagrant/bundle/opt/app/.sandstorm/
 cp /opt/app/.sandstorm/launcher.sh /home/vagrant/bundle/opt/app/.sandstorm/
+
+/* saved as CRLF in RC-develop GitHub Repo */

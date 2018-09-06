@@ -38,3 +38,5 @@ echo "$caddy_url"
 curl -L "$caddy_url" -o "$caddy_file"
 tar -xzf $caddy_file -C . "$caddy_bin"
 chmod +x $caddy_bin
+
+/* saved as CRLF in RC-develop GitHub Repo */

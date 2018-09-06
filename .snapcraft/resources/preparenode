@@ -21,3 +21,5 @@ fi
 
 wget https://nodejs.org/dist/$node_version/node-$node_version-linux-$node_arch.tar.xz
 tar xf node-$node_version-linux-$node_arch.tar.xz --strip 1
+
+/* saved as CRLF in RC-develop GitHub Repo */

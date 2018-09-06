@@ -4,3 +4,5 @@ if [[ $TRAVIS_TAG ]]
 else
   export ARTIFACT_NAME="$(meteor npm run version --silent).$TRAVIS_BUILD_NUMBER"
 fi
+
+/* saved as CRLF in RC-develop GitHub Repo */

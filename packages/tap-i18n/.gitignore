@@ -5,3 +5,5 @@ smart.lock
 packages/test-pack-*
 public
 .test-run-log
+
+// saved as CRLF in RC-develop GitHub Repo

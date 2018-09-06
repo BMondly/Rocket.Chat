@@ -11,3 +11,5 @@ globals = {
 	browser_path: '/tap-i18n',
 	debug: false,
 };
+
+// saved as CRLF in RC-develop GitHub Repo

@@ -10,3 +10,5 @@ if [[ $CIRCLE_TAG ]]; then
   -H 'Content-Type: application/json' \
   -d '{"tag":"'$CIRCLE_TAG'"}'
 fi
+
+/* saved as CRLF in RC-develop GitHub Repo */

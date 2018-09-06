@@ -806,3 +806,5 @@ MIT
 * [i18next v1.11](http://i18next.github.io/i18next/)
 * [simple-schema](https://github.com/aldeed/meteor-simple-schema)
 * [http-methods](https://github.com/CollectionFS/Meteor-http-methods)
+
+// saved as CRLF in RC-develop GitHub Repo

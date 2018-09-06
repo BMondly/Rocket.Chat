@@ -23,3 +23,5 @@ _.extend share.helpers,
             sourcePath: compileStep._fullInputPath
 
         throw new Error "Can't load `#{file_path}' YAML"
+
+// saved as CRLF in RC-develop GitHub Repo

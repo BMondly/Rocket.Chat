@@ -141,3 +141,5 @@ _.extend TAPi18n.prototype,
       if Meteor.isClient and @getLanguage() == language_tag
         # Retranslate if session language updated
         @_language_changed_tracker.changed()
+
+        // saved as CRLF in RC-develop GitHub Repo

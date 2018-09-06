@@ -77,3 +77,5 @@ Package.registerBuildPlugin({
 		'lib/plugin/compilers/i18n.yml.coffee',
 	],
 });
+
+// saved as CRLF in RC-develop GitHub Repo

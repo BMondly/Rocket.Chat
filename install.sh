@@ -16,3 +16,5 @@ tar zxf rocket.chat.tgz  &&  rm rocket.chat.tgz
 cd $ROOTPATH/bundle/programs/server
 npm install
 pm2 startOrRestart $ROOTPATH/current/$PM2FILE
+
+// saved as CRLF in RC-develop GitHub Repo
