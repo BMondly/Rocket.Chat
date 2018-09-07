@@ -119,7 +119,7 @@ const readMessage = new class {
 		if (subscription == null) {
 			return;
 		}
-
+		// ttrc TODO ESlint complaint
 		const room = RoomManager.openedRooms[subscription.t + subscription.team + '/' + subscription.name];
 		if (room == null) {
 			return;

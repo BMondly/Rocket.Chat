@@ -20,6 +20,7 @@ export class AppRoomBridge {
 				method = 'createPrivateGroup';
 				// params.push(team)
 				throw new Error('Team not set');
+				// ttrc TODO ESlint complaint - break; unreachable code an issue or just should be deleted?
 				break;
 			default:
 				throw new Error('Only channels and private groups can be created.');
@@ -27,11 +28,7 @@ export class AppRoomBridge {
 
 		let rid;
 		Meteor.runAsUser(room.creator.id, () => {
-<<<<<<< HEAD
 			const info = Meteor.call(method, ...params);
-=======
-			const info = Meteor.call(method, rcRoom.members);
->>>>>>> upstream/develop
 			rid = info.rid;
 		});
 

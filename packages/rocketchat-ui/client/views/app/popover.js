@@ -230,6 +230,7 @@ Template.popover.events({
 				if (subscription == null) {
 					return;
 				}
+				// ttrc TODO ESlint complaint
 				RoomManager.close(subscription.t + subscription.team + '/' + subscription.name);
 
 				FlowRouter.go('home');

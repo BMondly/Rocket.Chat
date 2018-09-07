@@ -4,6 +4,7 @@ Meteor.startup(function() {
 			if (msg.t === 'room_changed_privacy') {
 				if (Session.get('openedRoom') === msg.rid) {
 					const type = FlowRouter.current().route.name === 'channel' ? 'c' : 'p';
+					// ttrc TODO ESlint complaint
 					RoomManager.close(type + FlowRouter.getParam('team') + '/' + FlowRouter.getParam('name'));
 
 					const subscription = ChatSubscription.findOne({ rid: msg.rid });

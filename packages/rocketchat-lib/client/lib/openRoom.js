@@ -9,7 +9,7 @@ function openRoom(type, name, team) {
 	return Meteor.defer(() =>
 		currentTracker = Tracker.autorun(function(c) {
 			const user = Meteor.user();
-			if ((user && user.username == null) || user == null && RocketChat.settings.get('Accounts_AllowAnonymousRead') === false) {
+			if ((user && user.username == null) || (user == null && RocketChat.settings.get('Accounts_AllowAnonymousRead') === false)) {
 				BlazeLayout.render('main');
 				return;
 			}
@@ -28,21 +28,22 @@ function openRoom(type, name, team) {
 				if (type === 'd') {
 					Meteor.call('createDirectMessage', name, team, function(err) {
 						if (!err) {
+							// ttrc TODO ESlint complaint
 							RoomManager.close(type + team + '/' + name);
 							return openRoom('d', name, team);
 						} else {
-							Session.set('roomNotFound', {type, name});
-							BlazeLayout.render('main', {center: 'roomNotFound'});
+							// ttrc TODO ESlint complaint
+							Session.set('roomNotFound', { type, name, error });
+							BlazeLayout.render('main', { center: 'roomNotFound' });
 							return;
 						}
 					});
 				} else {
-					Meteor.call('getRoomByTypeAndName', type, name, function(err, record) {
-						if (err) {
-							Session.set('roomNotFound', {type, name});
-							return BlazeLayout.render('main', {center: 'roomNotFound'});
+					Meteor.call('getRoomByTypeAndName', type, name, function(error, record) {
+						if (error) {
+							Session.set('roomNotFound', { type, name, error });
+							return BlazeLayout.render('main', { center: 'roomNotFound' });
 						} else {
-							delete record.$loki;
 							RocketChat.models.Rooms.upsert({ _id: record._id }, _.omit(record, '_id'));
 							RoomManager.close(type + team + '/' + name);
 							return openRoom(type, name, team);
@@ -70,11 +71,12 @@ function openRoom(type, name, team) {
 			fireGlobalEvent('room-opened', _.omit(room, 'usernames'));
 
 			Session.set('editRoomTitle', false);
+			// ttrc TODO ESlint complaint
 			RoomManager.updateMentionsMarksOfRoom(type + team + '/' + name);
 			Meteor.setTimeout(() => readMessage.readNow(), 2000);
 			// KonchatNotification.removeRoomNotification(params._id)
 			// update user's room subscription
-			const sub = ChatSubscription.findOne({rid: room._id});
+			const sub = ChatSubscription.findOne({ rid: room._id });
 			if (sub && sub.open === false) {
 				Meteor.call('openRoom', room._id, function(err) {
 					if (err) {

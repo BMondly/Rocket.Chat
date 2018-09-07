@@ -10,7 +10,7 @@ function findPrivateGroupByIdOrName({ params, userId, checkedArchived = true }) 
 	if (params.roomId) {
 		roomSub = RocketChat.models.Subscriptions.findOneByRoomIdAndUserId(params.roomId, userId);
 	} else if (params.roomName && params.team) {
-        // Add team
+		// Add team
 		roomSub = RocketChat.models.Subscriptions.findOneByRoomNameAndUserId(params.team, params.roomName, userId);
 	}
 

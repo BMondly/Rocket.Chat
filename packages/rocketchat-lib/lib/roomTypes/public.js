@@ -1,11 +1,11 @@
 /* globals openRoom */
-import {RoomTypeConfig, RoomTypeRouteConfig, UiTextContext} from '../RoomTypeConfig';
+import { RoomTypeConfig, RoomTypeRouteConfig, RoomSettingsEnum, UiTextContext } from '../RoomTypeConfig';
 
 export class PublicRoomRoute extends RoomTypeRouteConfig {
 	constructor() {
 		super({
 			name: 'channel',
-			path: '/:team/channel/:name'
+			path: '/:team/channel/:name',
 		});
 	}
 
@@ -21,7 +21,7 @@ export class PublicRoomType extends RoomTypeConfig {
 			order: 30,
 			icon: 'hashtag',
 			label: 'Channels',
-			route: new PublicRoomRoute()
+			route: new PublicRoomRoute(),
 		});
 	}
 
@@ -29,7 +29,7 @@ export class PublicRoomType extends RoomTypeConfig {
 		const query = {
 			t: 'c',
 			name: identifier,
-			team
+			team,
 		};
 		return ChatRoom.findOne(query);
 	}
@@ -42,14 +42,12 @@ export class PublicRoomType extends RoomTypeConfig {
 	}
 
 	condition() {
-		const user = Meteor.user();
-		// const roomsListExhibitionMode = RocketChat.getUserPreference(user, 'roomsListExhibitionMode');
-		const mergeChannels = RocketChat.getUserPreference(user, 'mergeChannels');
-		return !mergeChannels && (RocketChat.authz.hasAtLeastOnePermission(['view-c-room', 'view-joined-room']) || RocketChat.settings.get('Accounts_AllowAnonymousRead') === true);
+		const groupByType = RocketChat.getUserPreference(Meteor.userId(), 'sidebarGroupByType');
+		return groupByType && (RocketChat.authz.hasAtLeastOnePermission(['view-c-room', 'view-joined-room']) || RocketChat.settings.get('Accounts_AllowAnonymousRead') === true);
 	}
 
 	showJoinLink(roomId) {
-		return !!ChatRoom.findOne({_id: roomId, t: 'c'});
+		return !!ChatRoom.findOne({ _id: roomId, t: 'c' });
 	}
 
 	includeInRoomSearch() {
@@ -64,12 +62,22 @@ export class PublicRoomType extends RoomTypeConfig {
 		return RocketChat.authz.hasAtLeastOnePermission(['add-user-to-any-c-room', 'add-user-to-joined-room'], room._id);
 	}
 
-	allowRoomSettingChange() {
+	enableMembersListProfile() {
 		return true;
 	}
 
-	enableMembersListProfile() {
-		return true;
+	allowRoomSettingChange(room, setting) {
+		switch (setting) {
+			case RoomSettingsEnum.BROADCAST:
+				return room.broadcast;
+			case RoomSettingsEnum.READ_ONLY:
+				return !room.broadcast;
+			case RoomSettingsEnum.REACT_WHEN_READ_ONLY:
+				return !room.broadcast && room.ro;
+			case RoomSettingsEnum.SYSTEM_MESSAGES:
+			default:
+				return true;
+		}
 	}
 
 	getUiText(context) {
