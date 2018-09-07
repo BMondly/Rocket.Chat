@@ -38,14 +38,20 @@ Meteor.methods({
 				method: 'createDirectMessage',
 			});
 		}
+		/* ttrc TODO - Logic
+		* The follow security addition was added just August 2018.
+		*    I decided to comment out the addition until ttrc has proven to be stable
+		*    after the major work to get it updated to v69.  James Craig Sept 7 2018
+		*
+		*		if (!RocketChat.authz.hasPermission(to._id, 'view-d-room')) {
+		*	throw new Meteor.Error('error-not-allowed', 'Target user not allowed to receive messages', {
+		*		method: 'createDirectMessage',
+		*	});
+		* }
+		*
+		*/
 
-		if (!RocketChat.authz.hasPermission(to._id, 'view-d-room')) {
-			throw new Meteor.Error('error-not-allowed', 'Target user not allowed to receive messages', {
-				method: 'createDirectMessage',
-			});
-		}
-
-		const rid = `${ [me._id, to._id].sort().join('') }_${ team }`;
+		const rid = [me._id, to._id].sort().join('') + team;
 
 		const now = new Date();
 
