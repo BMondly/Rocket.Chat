@@ -127,7 +127,7 @@
 		"bcrypt": "^2.0.1",
 		"bson": "^2.0.7",
 		"bugsnag": "^2.4.0",
-		"bunyan": "^1.8.12",
+		"bunyan": "^1.8.13",
 		"busboy": "^0.2.14",
 		"cas": "https://github.com/kcbanner/node-cas/tarball/fcd27dad333223b3b75a048bce27973fb3ca0f62",
 		"clipboard": "^2.0.1",
