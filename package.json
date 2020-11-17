@@ -181,7 +181,7 @@
 		"ua-parser-js": "^0.7.18",
 		"underscore": "^1.9.1",
 		"underscore.string": "^3.3.4",
-		"webdav": "^1.5.2",
+		"webdav": "^2.10.2",
 		"wolfy87-eventemitter": "^5.2.4",
 		"xml-crypto": "^0.10.1",
 		"xmlbuilder": "^10.0.0",
