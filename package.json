@@ -185,7 +185,7 @@
 		"wolfy87-eventemitter": "^5.2.4",
 		"xml-crypto": "^0.10.1",
 		"xmlbuilder": "^10.0.0",
-		"xmldom": "^0.1.27",
+		"xmldom": "^0.5.0",
 		"yaqrcode": "^0.2.1"
 	}
 }
