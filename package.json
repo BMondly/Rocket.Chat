@@ -179,7 +179,7 @@
 		"twilio": "^3.17.1",
 		"twit": "^2.2.10",
 		"ua-parser-js": "^0.7.18",
-		"underscore": "^1.9.1",
+		"underscore": "^1.12.1",
 		"underscore.string": "^3.3.4",
 		"webdav": "^1.5.2",
 		"wolfy87-eventemitter": "^5.2.4",
