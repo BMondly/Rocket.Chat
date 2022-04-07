@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "async": "^2.0.0-rc.3",
+    "async": "^3.2.2",
     "fs": "0.0.2",
     "google-translate": "^1.0.6",
     "recursive-readdir": "^2.0.0",
