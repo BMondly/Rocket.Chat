@@ -133,7 +133,7 @@
 		"clipboard": "^2.0.1",
 		"codemirror": "^5.38.0",
 		"coffeescript": "^1.12.7",
-		"connect": "^2.7.10",
+		"connect": "^3.0.0",
 		"core-js": "^2.5.7",
 		"csv-parse": "^2.4.0",
 		"emailreplyparser": "^0.0.5",
